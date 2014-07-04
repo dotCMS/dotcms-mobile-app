@@ -1,0 +1,12 @@
+".standard-window": {
+    fullscreen: true,
+    navBarHidden: true
+}
+
+".standard-scrollview": {
+    layout: "vertical"
+}
+
+".standard-content": {
+    backgroundColor: "white"
+}

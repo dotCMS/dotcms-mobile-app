@@ -1,0 +1,6 @@
+<Alloy>
+    <View id="header" class="header">
+        <Button id="toggleMenu" class="toggle-menu" />
+        <Label text="Header" />
+    </View>
+</Alloy>

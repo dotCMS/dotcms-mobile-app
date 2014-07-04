@@ -1,0 +1,9 @@
+<Alloy>
+    <Window id="standardWindow" class="standard-window">
+        <Widget src="slide-menu" id="slideMenu" width="200" />
+        <ScrollView id="standardScrollView" class="standard-scrollview">
+            <Widget src="header" id="header" />
+            <View id="standardContent" class="standard-content" />
+        </ScrollView>
+    </Window>
+</Alloy>

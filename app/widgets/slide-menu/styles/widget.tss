@@ -1,0 +1,6 @@
+".slide-menu": {
+    backgroundColor: "#eee",
+    left: 0,
+    zIndex: 1,
+    height: Ti.UI.FILL
+}
