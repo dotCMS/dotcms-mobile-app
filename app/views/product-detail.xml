@@ -1,0 +1,6 @@
+<Alloy>
+    <View id="content" class="content">
+        <Label id="title" class="title" />
+        <Label id="body" class="body" />
+    </View>
+</Alloy>

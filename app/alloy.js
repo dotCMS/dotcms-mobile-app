@@ -10,6 +10,12 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+//Dotcms env
+Alloy.Globals.dotcms = {
+    url: 'http://demo.dotcms.com',
+    hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
+}
+
 // Menu options
 // The id is the name of the controller
 Alloy.Globals.menuOptions = [
@@ -45,15 +51,27 @@ var NavigationController = require('NavigationController'); // use the Navigatio
 var navController = new NavigationController();
 Alloy.Globals.navcontroller = navController;
 
+// Opening new windows
+Alloy.Globals.openWindow = function(option) {
+    var standardWin = Alloy.createController('standard-win');
+    var standardWinView = standardWin.getView();
+    standardWinView.title = option.title;
+    Alloy.Globals.navcontroller.open(standardWinView);
+
+    // Setting the content into the just opened window
+    var homeContent = Alloy.createController(option.id, option);
+    standardWin.setMainContent(homeContent.getView());
+}
+
 
 // Utils
 Alloy.Globals.screenWidth = Ti.Platform.osname == 'android' ? Ti.Platform.displayCaps.platformWidth / (Titanium.Platform.displayCaps.dpi / 160) : Ti.Platform.displayCaps.platformWidth
 Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
 
-
+// Colors
 Alloy.Globals.colors = {
     blue: '#26333F',
-    lightBlue: '#9FC5E2',
+    blueLight: '#9FC5E2',
     green: '#7ED321',
     red: '#D0021B',
     white: 'white',
@@ -62,6 +80,7 @@ Alloy.Globals.colors = {
 Alloy.Globals.colors.slideMenuBg = Alloy.Globals.colors.blue;
 Alloy.Globals.colors.headerBg = Alloy.Globals.colors.blue;
 
+// Fonts
 var buildFonts = function () {
     var fonts = {
         primary: 'Kameron',

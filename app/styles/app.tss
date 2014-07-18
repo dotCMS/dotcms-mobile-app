@@ -5,6 +5,14 @@
     font: Alloy.Globals.fonts.secondary.body1.regular,
 }
 
+"TableView": {
+    separatorColor: Alloy.Globals.colors.blueLight,
+    separatorInsets: {
+        left: 15,
+        right: 0
+    }
+}
+
 "View": {
     backgroundColor: "white"
 }

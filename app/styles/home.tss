@@ -1,11 +1,6 @@
 ".home-news": {
     height: Ti.UI.SIZE,
     scrollable: false,
-    separatorColor: Alloy.Globals.colors.lightBlue,
-    separatorInsets: {
-        left: 15,
-        right: 0
-    }
 }
 
 ".home-content": {
