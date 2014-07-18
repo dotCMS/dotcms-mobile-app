@@ -29,6 +29,10 @@ Alloy.Globals.menuOptions = [
         title: 'About Us'
     },
     {
+        id: 'our-team',
+        title: 'Our Team'
+    },
+    {
         id: 'products',
         title: 'Products'
     },

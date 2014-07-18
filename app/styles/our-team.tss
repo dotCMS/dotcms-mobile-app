@@ -1,13 +1,13 @@
-".products": {
-    scrollable: false
-}
-
-".product-row": {
+".team-member-row": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.secondary.body1.regular,
     hasChild: true
 }
 
-".product-search-bar": {
+".our-team": {
+    scrollable: false
+}
+
+".our-team-search-bar": {
     barColor: Alloy.Globals.colors.blueLight,
 }

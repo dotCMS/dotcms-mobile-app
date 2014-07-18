@@ -1,0 +1,5 @@
+<Alloy>
+    <TableView id="ourTeam" class="our-team">
+        <SearchBar id="ourTeamSearchBar" class="our-team-search-bar" />
+    </TableView>
+</Alloy>
