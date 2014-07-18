@@ -1,9 +1,27 @@
 "Label": {
     width: Ti.UI.SIZE,
     height: Ti.UI.SIZE,
-    color: "#000"
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
 }
 
 "View": {
     backgroundColor: "white"
+}
+
+".body-content": {
+    left: 10,
+    right: 10,
+    top: 0
+}
+
+".body-title": {
+    font: Alloy.Globals.fonts.primary.header2.bold,
+    left: 10,
+    right: 10,
+    top: 0
+}
+
+".content": {
+    layout: "vertical",
 }

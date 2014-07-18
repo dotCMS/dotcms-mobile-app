@@ -1,5 +1,19 @@
+".menu-item-label": {
+    bottom: 5,
+    color: Alloy.Globals.colors.white,
+    font: Alloy.Globals.fonts.secondary.header2.regular,
+    top: 5,
+}
+
+".menu-options": {
+    backgroundColor: "transparent",
+    separatorColor: "transparent",
+    scrollable: false,
+    top: 10
+}
+
 ".slide-menu": {
-    backgroundColor: "#eee",
+    backgroundColor: Alloy.Globals.colors.slideMenuBg,
     left: 0,
     zIndex: 1,
     height: Ti.UI.FILL

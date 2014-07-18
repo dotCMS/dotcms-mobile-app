@@ -2,7 +2,7 @@
 $.slideMenu.setMainContainer($.standardScrollView);
 
 $.setMainContent = function(contentView) {
-    $.standardContent.add(contentView);
+    $.standardScrollView.add(contentView);
 }
 
 function slideNav() {

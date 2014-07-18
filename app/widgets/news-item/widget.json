@@ -1,0 +1,12 @@
+{
+    "id": "news-item",
+    "description" : "TableViewRow for news item",
+    "author": "Dotcms",
+    "version": "0.1",
+    "copyright":"Copyright (c) 2014 by dotcms.com",
+    "license":"Public Domain",
+    "min-alloy-version": "1.3.1",
+    "min-titanium-version":"3.2.4",
+    "tags":"utility,navigation",
+    "platforms":"android,ios"
+}

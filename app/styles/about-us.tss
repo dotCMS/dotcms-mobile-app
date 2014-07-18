@@ -1,0 +1,9 @@
+".about-image": {
+    bottom: 20,
+    width: Ti.UI.FILL
+}
+
+".body-content": {
+    top: 10,
+    height: Ti.UI.SIZE,
+}

@@ -4,7 +4,7 @@ var standardWinView = standardWin.getView();
 standardWinView.title = Alloy.Globals.menuOptions[0].title;
 Alloy.Globals.navcontroller.open(standardWinView);
 
-// Pushing the content to the window
+// Pushing the first content to the window
 var homeContent = Alloy.createController(Alloy.Globals.menuOptions[0].id);
 standardWin.setMainContent(homeContent.getView());
 
@@ -19,7 +19,9 @@ Ti.App.addEventListener('openSection', function(option) {
         nextWinView.title = option.title;
         Alloy.Globals.navcontroller.open(nextWinView);
 
-        var contentController = Alloy.createController(option.id);
+        var contentController = Alloy.createController(option.id, {
+            title: option.title
+        });
         nextWin.setMainContent(contentController.getView());
     }
 })

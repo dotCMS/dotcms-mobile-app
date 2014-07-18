@@ -1,6 +1,6 @@
 <Alloy>
     <View id="header" class="header">
         <Button id="toggleMenu" class="toggle-menu" />
-        <Label text="Header" />
+        <ImageView id="logo" class="logo" />
     </View>
 </Alloy>

@@ -1,0 +1,66 @@
+".home-news": {
+    height: Ti.UI.SIZE,
+    scrollable: false,
+    separatorColor: Alloy.Globals.colors.lightBlue,
+    separatorInsets: {
+        left: 15,
+        right: 0
+    }
+}
+
+".home-content": {
+    layout: "vertical"
+}
+
+".home-stocks": {
+    backgroundColor: Alloy.Globals.colors.blue,
+    height: 100
+}
+
+".home-quotes": {
+    backgroundColor: "transparent",
+    layout: "horizontal",
+    height: Ti.UI.SIZE,
+    width: 320
+}
+
+".home-quotes-wrapper": {
+    backgroundColor: Alloy.Globals.colors.blue,
+    height: Ti.UI.SIZE,
+}
+
+"#item1": {
+    left: 10,
+    right: 10
+}
+
+".quote-change-down": {
+    color: Alloy.Globals.colors.red,
+    font: Alloy.Globals.fonts.secondary.header5.regular,
+    top: -10
+}
+
+".quote-change-up": {
+    color: Alloy.Globals.colors.green,
+    font: Alloy.Globals.fonts.secondary.header5.regular,
+    top: -10
+}
+
+".quote-item": {
+    backgroundColor: "transparent",
+    bottom: 5,
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+    width: 100
+}
+
+".quote-name": {
+    color: Alloy.Globals.colors.white,
+    font: Alloy.Globals.fonts.secondary.header3.regular,
+}
+
+".quote-open": {
+    color: Alloy.Globals.colors.white,
+    font: Alloy.Globals.fonts.secondary.header5.regular,
+    top: -10
+}

@@ -1,10 +1,12 @@
 ".standard-window": {
     fullscreen: true,
-    navBarHidden: true
+    navBarHidden: true,
 }
 
 ".standard-scrollview": {
-    layout: "vertical"
+    contentWidth: "100%",
+    layout: "vertical",
+    zIndex: 2
 }
 
 ".standard-content": {

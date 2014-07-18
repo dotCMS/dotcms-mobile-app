@@ -11,9 +11,13 @@ $.slideMenu.left = -(slideMenuwidth);
 
 function createRow(option) {
     var row = Ti.UI.createTableViewRow({
-        id: option.id,
-        title: option.title,
+        id: option.id
     });
+    var label = Ti.UI.createLabel({
+        text: option.title,
+    })
+    $.resetClass(label, 'menu-item-label');
+    row.add(label);
     row.addEventListener('click', function() {
         Ti.App.fireEvent('openSection', option);
     })
