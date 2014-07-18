@@ -1,5 +1,0 @@
-<Alloy>
-    <View id="content" class="content">
-        <Label id="label">Option One</Label>
-    </View>
-</Alloy>
