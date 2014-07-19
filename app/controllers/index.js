@@ -9,4 +9,9 @@ Ti.App.fireEvent('toggleSlide'); // this one is to close the slide menu
     } else {
         Alloy.Globals.openWindow(option);
     }
-})
+});
+
+Ti.App.addEventListener('goToHome', function() {
+    Alloy.Globals.navcontroller.home();
+});
+

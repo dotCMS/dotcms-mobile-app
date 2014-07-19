@@ -1,5 +1,5 @@
 var productsParse = function(data) {
-    var contentlets = JSON.parse(data).contentlets;
+    var contentlets = data.contentlets;
 
     var productsData = [];
     _.each(contentlets, function(product) {

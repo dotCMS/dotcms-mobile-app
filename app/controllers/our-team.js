@@ -1,5 +1,5 @@
 var ourTeamParse = function(data) {
-    var contentlets = JSON.parse(data).contentlets;
+    var contentlets = data.contentlets;
 
     var ourTeamData = [];
     _.each(contentlets, function(teamMember) {
