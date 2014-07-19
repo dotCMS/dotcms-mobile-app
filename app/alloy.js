@@ -76,6 +76,7 @@ Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
 Alloy.Globals.colors = {
     blue: '#26333F',
     blueLight: '#9FC5E2',
+    blueLightest: '#ECF3F9',
     green: '#7ED321',
     red: '#D0021B',
     white: 'white',

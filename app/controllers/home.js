@@ -44,7 +44,7 @@ var contentlets = news.contentlets;
 
 var data = [];
 _.each(contentlets, function(item) {
-    var row = Alloy.createWidget('news-item', {
+    var row = Alloy.createWidget('news-item-small', {
         title: item.title,
         date: moment(item.sysPublishDate).format('MMMM Do YYYY'),
         image: 'http://demo.dotcms.com/contentAsset/image/' + item.inode + '/image/byInode/1/filter/Resize/resize_w/150',

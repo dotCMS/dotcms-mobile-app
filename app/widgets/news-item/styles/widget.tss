@@ -1,3 +1,7 @@
+".comments": {
+    left: 10
+}
+
 ".content-wrapper": {
     layout: "vertical",
     width: 205,
@@ -5,27 +9,58 @@
     height: Ti.UI.SIZE,
 }
 
+".content-info": {
+    backgroundColor: Alloy.Globals.colors.blueLightest,
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+    left: 5,
+    right: 5,
+}
+
 ".date": {
     bottom: 5,
     color: Alloy.Globals.colors.gray,
     font: Alloy.Globals.fonts.secondary.body1.regular,
-    left: 0,
+    left: 10,
+    right: 10,
     top: -5
 }
 
+".detail-info": {
+    backgroundColor: Alloy.Globals.colors.blueLightest,
+    height: Ti.UI.SIZE,
+    left: 5,
+    right: 5,
+}
+
 ".image": {
-    left: 15,
-    top: 5,
-    width: 75
+    width: 320,
+    height: 220,
+    defaultImage: "iphone/Default-Landscape.png"
 }
 
 ".item-wrapper": {
+    bottom: 20,
     height: Ti.UI.SIZE,
+    layout: "vertical",
+}
+
+".lead": {
+    ellipsize: true,
+    height: 80,
+    left: 10,
+    right: 10,
+    top: -15
+}
+
+".read": {
+    right: 10
 }
 
 ".title": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.primary.header5.bold,
-    left: 0,
+    left: 10,
+    right: 10,
     top: 5
 }

@@ -10,6 +10,7 @@
     "dependencies": {
         "header": "0.1",
         "news-item": "0.1",
+        "news-item-small": "0.1",
         "slide-menu": "0.1"
     }
 }

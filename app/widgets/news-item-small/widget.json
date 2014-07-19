@@ -1,6 +1,6 @@
 {
-    "id": "news-item",
-    "description" : "TableViewRow for news item in the news section",
+    "id": "news-item-small",
+    "description" : "TableViewRow for news item in the homepage",
     "author": "Dotcms",
     "version": "0.1",
     "copyright":"Copyright (c) 2014 by dotcms.com",

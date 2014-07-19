@@ -5,6 +5,11 @@
     font: Alloy.Globals.fonts.secondary.body1.regular,
 }
 
+"ImageView": {
+    //backgroundImage: "images/menu-icon.png",
+    defaultImage: "iphone/Default-Landscape.png"
+}
+
 "TableView": {
     separatorColor: Alloy.Globals.colors.blueLight,
     separatorInsets: {

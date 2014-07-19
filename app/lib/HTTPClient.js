@@ -15,6 +15,7 @@ var HTTPClient = function(structure, orderBy, callback) {
         timeout: 5000  // in milliseconds
     });
     // Prepare the connection.
+    console.log('---> HTTP request to: ' + url);
     client.open('GET', url);
     // Send the request.
     client.send();

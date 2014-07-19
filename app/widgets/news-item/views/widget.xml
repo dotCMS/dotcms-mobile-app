@@ -1,9 +1,17 @@
 <Alloy>
-    <TableViewRow class="item-wrapper" id="row">
-        <ImageView id="image" class="image" />
-        <View id="contentWrapper" class="content-wrapper">
-            <Label id="title" class="title" />
-            <Label id="date" class="date" />
+    <TableViewRow id="row">
+        <View class="item-wrapper">
+            <View id="contentInfo" class="content-info">
+                <Label id="title" class="title" />
+                <Label id="date" class="date" />
+                <Label id="lead" class="lead" />
+            </View>
+            <ImageView id="image" class="image" />
+            <View id="detailInfo" class="detail-info">
+                <Label id="comments" class="comments" text="Comments" />
+                <Label id="share" class="share" text="Share" />
+                <Label id="read" class="read" text="Read full article" />
+            </View>
         </View>
     </TableViewRow>
 </Alloy>

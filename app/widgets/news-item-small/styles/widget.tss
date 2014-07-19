@@ -1,0 +1,31 @@
+".content-wrapper": {
+    layout: "vertical",
+    width: 205,
+    right: 10,
+    height: Ti.UI.SIZE,
+}
+
+".date": {
+    bottom: 5,
+    color: Alloy.Globals.colors.gray,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
+    left: 0,
+    top: -5
+}
+
+".image": {
+    left: 15,
+    top: 5,
+    width: 75
+}
+
+".item-wrapper": {
+    height: Ti.UI.SIZE,
+}
+
+".title": {
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.primary.header5.bold,
+    left: 0,
+    top: 5
+}
