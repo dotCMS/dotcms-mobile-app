@@ -1,3 +1,6 @@
+$.args = arguments[0] || {};
+var standardWinView = $.args.standardWinView;
+
 var productsParse = function(data) {
     var contentlets = data.contentlets;
 
@@ -18,6 +21,9 @@ var productsParse = function(data) {
     });
 
     $.products.setData(productsData);
+
+    // Opening the window when all the content is ready
+    Alloy.Globals.navcontroller.open(standardWinView);
 }
 
 var productDetail = function(e) {

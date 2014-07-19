@@ -60,7 +60,8 @@ Alloy.Globals.openWindow = function(option) {
     var standardWin = Alloy.createController('standard-win');
     var standardWinView = standardWin.getView();
     standardWinView.title = option.title;
-    Alloy.Globals.navcontroller.open(standardWinView);
+    //Alloy.Globals.navcontroller.open(standardWinView);
+    option.standardWinView = standardWinView;
 
     // Setting the content into the just opened window
     var homeContent = Alloy.createController(option.id, option);

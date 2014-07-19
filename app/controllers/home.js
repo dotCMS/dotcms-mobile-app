@@ -1,3 +1,6 @@
+$.args = arguments[0] || {};
+var standardWinView = $.args.standardWinView;
+
 var moment = require('alloy/moment');
 
 //http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22%5EGSPC%22%2C%22%5EIXIC%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
@@ -53,6 +56,9 @@ var contentlets = data.contentlets;
         newsData.push(row);
     });
     $.homeNews.setData(newsData);
+
+    // Opening the window when all the content is ready
+    Alloy.Globals.navcontroller.open(standardWinView);
 }
 
 var newDetail = function(e) {

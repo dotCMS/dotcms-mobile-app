@@ -1,5 +1,7 @@
-// TODO: check why is returning only 3 news items
+$.args = arguments[0] || {};
+var standardWinView = $.args.standardWinView;
 
+// TODO: check why is returning only 3 news items
 var newsParse = function(data) {
     var contentlets = data.contentlets;
 
@@ -18,6 +20,9 @@ var newsParse = function(data) {
     });
 
     $.news.setData(newsData);
+
+    // Opening the window when all the content is ready
+    Alloy.Globals.navcontroller.open(standardWinView);
 }
 
 var newDetail = function(e) {

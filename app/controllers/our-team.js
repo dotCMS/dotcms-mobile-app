@@ -1,3 +1,6 @@
+$.args = arguments[0] || {};
+var standardWinView = $.args.standardWinView;
+
 var ourTeamParse = function(data) {
     var contentlets = data.contentlets;
 
@@ -18,6 +21,8 @@ var ourTeamParse = function(data) {
     });
 
     $.ourTeam.setData(ourTeamData);
+    // Opening the window when all the content is ready
+    Alloy.Globals.navcontroller.open(standardWinView);
 }
 
 var ourTeamDetail = function(e) {
