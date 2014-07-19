@@ -7,7 +7,12 @@ var ourTeamParse = function(data) {
             title: teamMember.firstName + ' ' + teamMember.lastName,
             detail: teamMember
         });
-        $.resetClass(row, 'team-member-row');
+        var rowClass = 'team-member-row';
+        if (Alloy.Globals.isAndroid) {
+            row.className = rowClass;
+        } else {
+            $.resetClass(row, rowClass);
+        }
         row.addEventListener('click', ourTeamDetail);
         ourTeamData.push(row);
     });

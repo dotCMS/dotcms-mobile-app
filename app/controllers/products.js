@@ -7,7 +7,12 @@ var productsParse = function(data) {
             title: product.title,
             detail: product
         });
-        $.resetClass(row, 'product-row');
+        var rowClass = 'product-row';
+        if (Alloy.Globals.isAndroid) {
+            row.className = rowClass;
+        } else {
+            $.resetClass(row, rowClass);
+        }
         row.addEventListener('click', productDetail);
         productsData.push(row);
     });

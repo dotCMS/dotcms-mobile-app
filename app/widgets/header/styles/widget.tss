@@ -6,12 +6,12 @@
 }
 
 ".logo": {
-    image: "images/logo.png",
-    width: 125
+    image: "/images/logo.png",
+    width: 125,
 }
 
 ".toggle-menu": {
-    backgroundImage: "images/menu-icon.png",
+    backgroundImage: "/images/menu-icon.png",
     height: 44,
     left: 3,
     width: 44

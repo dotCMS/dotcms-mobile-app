@@ -4,6 +4,7 @@
 }
 
 ".standard-scrollview": {
+    backgroundColor: Alloy.Globals.colors.white,
     contentWidth: "100%",
     layout: "vertical",
     zIndex: 2

@@ -12,7 +12,7 @@ var newsParse = function(data) {
             lead: newitem.lead,
             id: newitem.identifier
         }).getView();
-        $.resetClass(row, 'newitem-row');
+        //$.resetClass(row, 'newitem-row');
         row.addEventListener('click', newDetail);
         newsData.push(row);
     });
