@@ -36,7 +36,7 @@
 ".image": {
     width: 320,
     height: 220,
-    defaultImage: "iphone/Default-Landscape.png"
+    defaultImage: "images/default-image.gif"
 }
 
 ".item-wrapper": {

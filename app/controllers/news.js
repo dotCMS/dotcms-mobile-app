@@ -1,7 +1,7 @@
 // TODO: check why is returning only 3 news items
 
 var newsParse = function(data) {
-    var contentlets = JSON.parse(data).contentlets;
+    var contentlets = data.contentlets;
 
     var newsData = [];
     _.each(contentlets, function(newitem) {

@@ -5,17 +5,16 @@ var HTTPClient = function(structure, orderBy, callback) {
     var client = Ti.Network.createHTTPClient({
         // function called when the response data is available
         onload: function(e) {
-            //Ti.API.info('Received text: ' + this.responseText);
-            callback(this.responseText);
+            callback(JSON.parse(this.responseText));
         },
         // function called when an error occurs, including a timeout
         onerror: function(e) {
             Ti.API.debug(e.error);
         },
-        timeout: 5000  // in milliseconds
+        timeout: 15000  // in milliseconds
     });
     // Prepare the connection.
-    console.log('---> HTTP request to: ' + url);
+    console.log('!!! HTTP request to: ' + url);
     client.open('GET', url);
     // Send the request.
     client.send();
