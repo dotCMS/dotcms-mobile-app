@@ -16,3 +16,11 @@
     left: 3,
     width: 44
 }
+
+".back-menu": {
+    backgroundImage: "/images/back-icon.png",
+    left: 44,
+    height: 44,
+    visible: false,
+    width: 30
+}

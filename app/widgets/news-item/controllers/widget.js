@@ -5,7 +5,6 @@ var image = $.args.image;
 var lead = $.args.lead
 var title = $.args.title
 
-console.log(image);
 $.date.text = date;
 $.image.image = image;
 $.row.id = id;

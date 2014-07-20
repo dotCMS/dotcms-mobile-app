@@ -8,3 +8,9 @@ $.setMainContent = function(contentView) {
 function slideNav() {
     $.slideMenu.toggleMenu();
 }
+
+// Show the back button only when is more than one window opened
+if (Alloy.Globals.navcontroller.windowsInfo().stackLength > 0) {
+    $.header.showBackButton();
+}
+

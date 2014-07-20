@@ -10,8 +10,11 @@ function NavigationController() {
 };
 
 // Note: get the latest window
-NavigationController.prototype.topWin = function() {
-    return this.windowStack[this.windowStack.length - 1];
+NavigationController.prototype.windowsInfo = function() {
+    return {
+        stackLength: this.windowStack.length,
+        stackTop: this.windowStack[this.windowStack.length - 1],
+    };
 };
 
 // Note: without a parameter, close automatically closes 1 window
