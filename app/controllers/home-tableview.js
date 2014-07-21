@@ -42,28 +42,20 @@ function createQuote(name, open, changeinPercent, index) {
     return itemWrapper;
 }
 
-
 var newsParse = function(data) {
-    var newsData = [];
     var contentlets = data.contentlets;
-    _.each(contentlets, function(item) {
-        newsData.push({
-            newsTitle: {
-                text: item.title
-            },
-            newsDate: {
-                text: moment(item.sysPublishDate).format('MMMM Do YYYY')
-            },
-            newsImage: {
-                image: 'http://demo.dotcms.com/contentAsset/image/' + item.inode + '/image/byInode/1/filter/Resize/resize_w/150'
-            },
+    var newsData = [];
+    _.each(contentlets, function(item, index) {
+        var row = Alloy.createWidget('news-item-small', {
+            title: item.title,
+            date: moment(item.sysPublishDate).format('MMMM Do YYYY'),
+            image: Alloy.Globals.dotcms.url + '/contentAsset/raw-data/' + item.identifier + '/image',
+            //image: 'http://demo.dotcms.com/contentAsset/image/' + item.inode + '/image/byInode/1/filter/Resize/resize_w/150',
             id: item.identifier
-        });
+        }).getView();
+        newsData.push(row);
     });
-
-    $.homeNewsSection.setItems(newsData);
-    $.homeNews.setSections([$.homeNewsSection]);
-    $.homeNews.addEventListener('itemclick', newDetail);
+    $.homeNews.setData(newsData);
 
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);

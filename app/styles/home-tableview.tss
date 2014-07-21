@@ -1,22 +1,10 @@
-".content-wrapper": {
-    layout: "vertical",
-    width: 205,
-    right: 10,
+".home-news": {
     height: Ti.UI.SIZE,
+    scrollable: false,
 }
-
 
 ".home-content": {
-    layout: "vertical",
-}
-
-".home-news": {
-    canScroll: false,
-    separatorColor: Alloy.Globals.colors.blueLight,
-    separatorInsets: {
-        left: 15,
-        right: 0
-    }
+    layout: "vertical"
 }
 
 ".home-stocks": {
@@ -33,39 +21,12 @@
 
 ".home-quotes-wrapper": {
     backgroundColor: Alloy.Globals.colors.blue,
-    bottom: 10,
     height: Ti.UI.SIZE,
 }
 
 "#item1": {
     left: 10,
     right: 10
-}
-
-".news-date": {
-    bottom: 5,
-    color: Alloy.Globals.colors.gray,
-    font: Alloy.Globals.fonts.secondary.body1.regular,
-    left: 0,
-    top: -5
-}
-
-".news-image": {
-    defaultImage: "images/default-image.gif",
-    left: 15,
-    top: 10,
-    width: 75
-}
-
-".news-item-wrapper": {
-    height: Ti.UI.SIZE,
-}
-
-".news-title": {
-    color: Alloy.Globals.colors.blue,
-    font: Alloy.Globals.fonts.primary.header5.bold,
-    left: 0,
-    top: 5
 }
 
 ".quote-change-down": {

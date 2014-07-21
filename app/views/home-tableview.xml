@@ -1,0 +1,8 @@
+<Alloy>
+    <View id="homeContent" class="home-content">
+        <View class="home-quotes-wrapper">
+            <View id="homeQuotes" class="home-quotes" />
+        </View>
+        <TableView id="homeNews" class="home-news">
+    </View>
+</Alloy>
