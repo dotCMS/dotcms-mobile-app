@@ -1,0 +1,20 @@
+<Alloy>
+    <ListView id="events" class="events" defaultItemTemplate="template">
+        <Templates>
+            <ItemTemplate name="template" id="ItemTemplate" class="event-item">
+                <View id="eventItemWrapper" class="event-item-wrapper">
+                    <View id="timeInfo" class="event-time">
+                        <Label bindId="eventStart" id="eventStart" class="event-start" />
+                        <Label bindId="eventEnd" id="eventEnd" class="event-end" />
+                    </View>
+                    <View id="verticalSep" class="verical-sep" />
+                    <View id="contentWrapper" class="event-content">
+                        <Label bindId="eventTitle" id="eventTitle" class="event-title" />
+                        <Label bindId="eventDesc" id="eventDesc" class="event-desc" />
+                    </View>
+                </View>
+            </ItemTemplate>
+        </Templates>
+        <!-- <ListSection id="eventsSection" class="events-section" /> -->
+    </ListView>
+</Alloy>

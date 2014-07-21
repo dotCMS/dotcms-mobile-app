@@ -1,0 +1,71 @@
+".events": {
+    canScroll: false,
+    top: 10,
+    separatorColor: Alloy.Globals.colors.blueLight,
+    separatorInsets: {
+        left: 15,
+        right: 0
+    }
+}
+
+".event-content": {
+    layout: "vertical",
+    left: 75,
+    right: 15
+}
+
+".event-desc": {
+    bottom: 5,
+    color: Alloy.Globals.colors.blueLight,
+    ellipsize: true,
+    font: Alloy.Globals.fonts.secondary.mouse.regular,
+    height: 30,
+    left: 0,
+    top: -5
+}
+
+".event-info": {
+    layout: "vertical",
+}
+
+".event-item": {
+    height: Ti.UI.SIZE,
+}
+
+".event-item-wrapper": {
+    height: Ti.UI.SIZE,
+}
+
+".event-start": {
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.secondary.mouse.regular,
+}
+
+".event-end": {
+    color: Alloy.Globals.colors.gray,
+    font: Alloy.Globals.fonts.secondary.mouse.regular,
+    top: -5
+}
+
+".event-time": {
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+    left: 10,
+    width: 55
+}
+
+".event-title": {
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.primary.header5.bold,
+    left: 0,
+    top: 5
+}
+
+".verical-sep": {
+    backgroundColor: Alloy.Globals.colors.blueLight,
+    bottom: 10,
+    height: Ti.UI.FILL,
+    left: 65,
+    top: 10,
+    width: 1,
+}

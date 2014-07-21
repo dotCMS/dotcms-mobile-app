@@ -72,6 +72,14 @@ Alloy.Globals.openWindow = function(option) {
 Alloy.Globals.screenWidth = Ti.Platform.osname == 'android' ? Ti.Platform.displayCaps.platformWidth / (Titanium.Platform.displayCaps.dpi / 160) : Ti.Platform.displayCaps.platformWidth
 Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
 
+// TODO: find a better way to parse/encode HTML
+Alloy.Globals.stripHtml = function(content) {
+    var stripped = content.replace(/<[^>]*>?/g, '');
+    stripped = stripped.replace('\n', '');
+    stripped = stripped.replace('—&nbsp;', '— ');
+    return stripped;
+}
+
 // Colors
 Alloy.Globals.colors = {
     blue: '#26333F',

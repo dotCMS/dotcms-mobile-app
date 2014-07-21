@@ -7,14 +7,9 @@ var data = {"contentlets":[{"stInode":"2a3e91e4-fbbf-4876-8c5b-2233c1739b05","ow
 var aboutUsHtml = data.contentlets[0].body;
 var imageUrl = aboutUsHtml.match(/"([^>]+)/g)[0];
 
-// TODO: find a better way to parse/encode HTML
-var content = aboutUsHtml.replace(/<[^>]*>?/g, '');
-content = content.replace('\n', '');
-content = content.replace('—&nbsp;', '— ');
-
 $.aboutImage.image = 'http://demo.dotcms.com/contentAsset/image/7de092d3-d051-4898-8623-48113b4ec1ca/fileAsset/byInode/1/filter/Resize/resize_w/700';
 $.title.text = pageTitle;
-$.aboutBody.text = content;
+$.aboutBody.text = Alloy.Globals.stripHtml(aboutUsHtml);
 
 // Opening the window when all the content is ready
 Alloy.Globals.navcontroller.open(standardWinView);

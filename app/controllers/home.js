@@ -52,7 +52,7 @@ var newsParse = function(data) {
                 text: item.title
             },
             newsDate: {
-                text: moment(item.sysPublishDate).format('MMMM Do YYYY')
+                text: moment(item.sysPublishDate).format('MMMM D, YYYY')
             },
             newsImage: {
                 image: 'http://demo.dotcms.com/contentAsset/image/' + item.inode + '/image/byInode/1/filter/Resize/resize_w/150'
