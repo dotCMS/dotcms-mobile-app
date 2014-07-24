@@ -35,6 +35,15 @@ var eventsParse = function(data) {
     });
 
     _.each(contentlets, function(item, index) {
+        if (oldDate != item.startDate) {
+            section.setItems(eventsData);
+            allSections.push(section)
+            section = Ti.UI.createListSection({
+                headerView: createHeaderView(moment(item.startDate).format('MMMM D, YYYY'))
+            });
+            eventsData = [];
+            oldDate = item.startDate;
+        }
         eventsData.push({
             eventStart: {
                 text: moment(item.startDate).format('hh:mma')
@@ -50,15 +59,6 @@ var eventsParse = function(data) {
             },
             id: item.identifier
         });
-        if (oldDate != item.startDate) {
-            section.setItems(eventsData);
-            allSections.push(section)
-            section = Ti.UI.createListSection({
-                headerView: createHeaderView(moment(item.startDate).format('MMMM D, YYYY'))
-            });
-            eventsData = [];
-            oldDate = item.startDate;
-        }
     });
     $.events.setSections(allSections);
     $.events.addEventListener('itemclick', eventDetail);
