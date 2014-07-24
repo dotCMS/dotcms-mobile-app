@@ -40,7 +40,8 @@
 }
 
 ".item-wrapper": {
-    bottom: 20,
+    top: 10,
+    bottom: 10,
     height: Ti.UI.SIZE,
     layout: "vertical",
 }

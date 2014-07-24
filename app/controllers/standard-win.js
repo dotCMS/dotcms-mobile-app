@@ -1,8 +1,8 @@
 // Sending the main container to the slide menu widget
-$.slideMenu.setMainContainer($.standardScrollView);
+$.slideMenu.setMainContainer($.standardView);
 
 $.setMainContent = function(contentView) {
-    $.standardScrollView.add(contentView);
+    $.standardView.add(contentView);
 }
 
 function slideNav() {

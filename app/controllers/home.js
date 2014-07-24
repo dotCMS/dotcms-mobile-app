@@ -46,6 +46,8 @@ function createQuote(name, open, changeinPercent, index) {
 var newsParse = function(data) {
     var newsData = [];
     var contentlets = data.contentlets;
+    console.log('----->');
+    console.log(contentlets.length);
     _.each(contentlets, function(item) {
         newsData.push({
             newsTitle: {

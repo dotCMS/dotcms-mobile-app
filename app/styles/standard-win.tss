@@ -3,7 +3,7 @@
     navBarHidden: true,
 }
 
-".standard-scrollview": {
+".standard-view": {
     backgroundColor: Alloy.Globals.colors.white,
     contentWidth: "100%",
     layout: "vertical",

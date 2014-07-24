@@ -1,7 +1,3 @@
-".products": {
-    scrollable: false
-}
-
 ".product-row": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.secondary.body1.regular,

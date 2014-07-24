@@ -1,6 +1,5 @@
 ".news": {
-    scrollable: false,
-    separatorColor: "transparent",
+    separatorColor: "transparent"
 }
 
 ".new-row": {

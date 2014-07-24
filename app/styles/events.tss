@@ -1,11 +1,11 @@
 ".events": {
-    canScroll: false,
-    top: 10,
+    bottom: 10,
     separatorColor: Alloy.Globals.colors.blueLight,
     separatorInsets: {
         left: 15,
         right: 0
-    }
+    },
+    top: 10
 }
 
 ".event-content": {

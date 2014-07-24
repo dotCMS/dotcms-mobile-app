@@ -1,5 +1,5 @@
 <Alloy>
-    <View id="homeContent" class="home-content">
+    <ScrollView id="homeContent" class="home-content">
         <View class="home-quotes-wrapper">
             <View id="homeQuotes" class="home-quotes" />
         </View>
@@ -15,5 +15,5 @@
             </Templates>
             <ListSection id="homeNewsSection" class="home-news-section" />
         </ListView>
-    </View>
+    </ScrollView>
 </Alloy>

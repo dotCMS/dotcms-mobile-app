@@ -1,6 +1,5 @@
 ".our-team": {
     caseInsensitiveSearch: true,
-    canScroll: false,
     separatorColor: Alloy.Globals.colors.blueLight,
     separatorInsets: {
         left: 15,
@@ -11,6 +10,7 @@
 ".our-team-search-bar": {
     barColor: Alloy.Globals.colors.blueLight,
     borderColor: Alloy.Globals.colors.blueLightest,
+    bottom: 10,
     width: Ti.UI.FILL
 }
 

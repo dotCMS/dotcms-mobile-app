@@ -7,3 +7,7 @@
     top: 10,
     height: Ti.UI.SIZE,
 }
+
+".content": {
+    contentWidth: "100%",
+}

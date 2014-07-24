@@ -1,8 +1,8 @@
 <Alloy>
     <Window id="standardWindow" class="standard-window">
         <Widget src="slide-menu" id="slideMenu" width="200" />
-        <ScrollView id="standardScrollView" class="standard-scrollview">
+        <View id="standardView" class="standard-view">
             <Widget src="header" id="header" />
-        </ScrollView>
+        </View>
     </Window>
 </Alloy>
