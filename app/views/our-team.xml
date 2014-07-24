@@ -1,5 +1,15 @@
 <Alloy>
-    <TableView id="ourTeam" class="our-team">
-        <SearchBar id="ourTeamSearchBar" class="our-team-search-bar" />
-    </TableView>
+    <ListView id="ourTeam" class="our-team" defaultItemTemplate="template" searchView="ourTeamSearchBar">
+        <SearchBar id="ourTeamSearchBar" class="our-team-search-bar" platform="ios"/>
+        <SearchView ns="Ti.UI.Android" class="our-team-search-bar" platform="android"/>
+        <Templates>
+            <ItemTemplate name="template" id="ItemTemplate" class="team-member-item">
+                <ImageView bindId="teamMemberAvatar" id="teamMemberAvatar" class="team-member-avatar" />
+                <View id="teamMemberContent" class="team-member-content">
+                    <Label bindId="teamMemberName" id="teamMemberName" class="team-member-title" />
+                    <Label bindId="teamMemberjobTitle" id="teamMemberjobTitle" class="team-member-jobtitle" />
+                </View>
+            </ItemTemplate>
+        </Templates>
+    </ListView>
 </Alloy>

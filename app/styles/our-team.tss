@@ -1,13 +1,44 @@
-".team-member-row": {
-    color: Alloy.Globals.colors.blue,
-    font: Alloy.Globals.fonts.secondary.body1.regular,
-    hasChild: true
-}
-
 ".our-team": {
-    scrollable: false
+    caseInsensitiveSearch: true,
+    canScroll: false,
+    separatorColor: Alloy.Globals.colors.blueLight,
+    separatorInsets: {
+        left: 15,
+        right: 0
+    }
 }
 
 ".our-team-search-bar": {
     barColor: Alloy.Globals.colors.blueLight,
+    borderColor: Alloy.Globals.colors.blueLightest,
+    width: Ti.UI.FILL
+}
+
+".team-member-avatar": {
+    //defaultImage: "/images/avatar-unknown.png",
+    //image: "/images/avatar-unknown.png",
+    height: 50,
+    left: 15,
+    width: 50
+}
+
+".team-member-content": {
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+    left: 60
+}
+
+".team-member-jobtitle": {
+    color: Alloy.Globals.colors.blueLight,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
+    left: 15,
+    top: -15
+}
+
+".team-member-item": {
+    height: Ti.UI.SIZE,
+}
+
+".team-member-title": {
+    left: 15
 }
