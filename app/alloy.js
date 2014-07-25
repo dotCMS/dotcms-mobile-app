@@ -12,7 +12,7 @@
 
 //Dotcms env
 Alloy.Globals.dotcms = {
-    url: 'http://demo.dotcms.com',
+    url: 'http://starter.dotcms.com:8080',
     hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
 }
 

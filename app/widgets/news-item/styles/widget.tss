@@ -1,5 +1,23 @@
-".comments": {
+"#commentsButton": {
     left: 10
+}
+
+".btn-view": {
+    backgroundColor: "transparent",
+    width: Ti.UI.SIZE
+}
+
+".btn-label": {
+    font: Alloy.Globals.fonts.secondary.body2.regular,
+    left: 26
+}
+
+".btn-read": {
+    font: Alloy.Globals.fonts.secondary.body2.regular,
+    color: Alloy.Globals.colors.blue,
+    height: 44,
+    right: 10,
+    text: "Read full article"
 }
 
 ".content-wrapper": {
@@ -17,26 +35,10 @@
     right: 5,
 }
 
-".date": {
-    bottom: 5,
-    color: Alloy.Globals.colors.gray,
-    font: Alloy.Globals.fonts.secondary.body1.regular,
-    left: 10,
-    right: 10,
-    top: -5
-}
-
-".detail-info": {
-    backgroundColor: Alloy.Globals.colors.blueLightest,
-    height: Ti.UI.SIZE,
-    left: 5,
-    right: 5,
-}
-
-".image": {
-    width: 320,
-    height: 220,
-    defaultImage: "images/default-image.gif"
+".icn": {
+    height: 20,
+    left: 0,
+    width: 20
 }
 
 ".item-wrapper": {
@@ -46,7 +48,30 @@
     layout: "vertical",
 }
 
-".lead": {
+".new-actions": {
+    backgroundColor: Alloy.Globals.colors.blueLightest,
+    height: 44,
+    layout: "horizontal",
+    left: 5,
+    right: 5,
+}
+
+".new-date": {
+    bottom: 5,
+    color: Alloy.Globals.colors.gray,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
+    left: 10,
+    right: 10,
+    top: -5
+}
+
+".new-image": {
+    width: 320,
+    height: 220,
+    defaultImage: "images/default-image.gif"
+}
+
+".new-lead": {
     ellipsize: true,
     height: 80,
     left: 10,
@@ -54,14 +79,19 @@
     top: -15
 }
 
-".read": {
-    right: 10
-}
-
-".title": {
+".new-title": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.primary.header5.bold,
     left: 10,
     right: 10,
     top: 5
+}
+
+".separator": {
+    backgroundColor: Alloy.Globals.colors.blueLight,
+    bottom: 10,
+    left: 8,
+    right: 8,
+    top: 10,
+    width: 1
 }
