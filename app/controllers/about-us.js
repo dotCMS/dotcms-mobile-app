@@ -15,4 +15,4 @@ var aboutUsParse = function(data) {
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('', '', aboutUsParse, '767509b1-2392-4661-a16b-e0e31ce27719');
+HTTPClient.contentAPI('', '', aboutUsParse, '767509b1-2392-4661-a16b-e0e31ce27719');

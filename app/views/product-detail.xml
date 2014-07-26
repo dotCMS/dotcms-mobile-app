@@ -1,6 +1,15 @@
 <Alloy>
-    <View id="content" class="content">
-        <Label id="title" class="title" />
-        <Label id="body" class="body" />
-    </View>
+    <ScrollView id="content" class="content">
+        <View class="page-title">
+            <Label id="productTitle" class="product-title" />
+            <View class="dotted-line" />
+        </View>
+        <Label id="productPrice" class="product-price" />
+        <Label id="productChange" class="product-change" />
+        <Label id="productDesc" class="product-description" />
+        <View id="moreWrapper" class="more-wrapper">
+            <View id="moreDottedLine" class="dotted-line" />
+            <Button id="btnMore" class="btn-more" title="MORE" />
+        </View>
+    </ScrollView>
 </Alloy>

@@ -34,4 +34,4 @@ var newDetail = function(e) {
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('News', 'sysPublishDate', newsParse);
+HTTPClient.contentAPI('News', 'sysPublishDate', newsParse);

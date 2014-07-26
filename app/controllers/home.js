@@ -44,6 +44,7 @@ function createQuote(name, open, changeinPercent, index) {
 
 
 var newsParse = function(data) {
+    console.log(data);
     var newsData = [];
     var contentlets = data.contentlets;
     _.each(contentlets, function(item) {
@@ -78,4 +79,4 @@ var newDetail = function(e) {
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('News', 'sysPublishDate', newsParse);
+HTTPClient.contentAPI('News', 'sysPublishDate', newsParse);

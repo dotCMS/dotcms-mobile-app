@@ -77,4 +77,4 @@ var eventDetail = function(e) {
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('calendarEvent', 'startDate%20desc', eventsParse);
+HTTPClient.contentAPI('calendarEvent', 'startDate%20desc', eventsParse);

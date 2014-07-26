@@ -99,4 +99,4 @@ var ourTeamDetail = function(e) {
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('Employee', 'firstName', ourTeamParse);
+HTTPClient.contentAPI('Employee', 'firstName', ourTeamParse);

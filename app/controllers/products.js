@@ -30,9 +30,9 @@ var productDetail = function(e) {
     Alloy.Globals.openWindow({
         id: 'product-detail',
         title: e.row.detail.title,
-        detail: e.row.detail
+        content: e.row.detail
     });
 }
 
 var HTTPClient = require('HTTPClient');
-HTTPClient('Products', 'title', productsParse);
+HTTPClient.contentAPI('Products', 'title', productsParse);

@@ -1,3 +1,10 @@
+".dotted-line": {
+    backgroundImage: "/images/dotted-line.png",
+    backgroundRepeat: true,
+    height: 1,
+    width: Ti.UI.SIZE
+}
+
 "Button": {
     font: Alloy.Globals.fonts.secondary.body1.regular,
 }
@@ -42,4 +49,11 @@
 
 ".content": {
     layout: "vertical",
+}
+
+".dotted-line": {
+    backgroundImage: "/images/dotted-line.png",
+    backgroundRepeat: true,
+    height: 1,
+    width: "100%",
 }

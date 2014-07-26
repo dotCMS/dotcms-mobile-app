@@ -1,6 +1,8 @@
-$.toggleMenu.addEventListener('singletap', function() {
+var fireToggleEvent = function() {
     Ti.App.fireEvent('toggleSlide');
-});
+}
+
+$.toggleMenu.addEventListener('singletap', fireToggleEvent);
 
 $.logo.addEventListener('singletap', function() {
     Ti.App.fireEvent('goToHome');
