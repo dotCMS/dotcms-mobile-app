@@ -1,7 +1,8 @@
+$.activityIndicator.show();
+
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 var content = $.args.content;
-console.log(console);
 
 $.productTitle.text = $.args.title.toUpperCase();
 $.productDesc.text = Alloy.Globals.stripHtml(content.summary);
@@ -21,6 +22,8 @@ function yahooInfoParse(data) {
     $.productPrice.text = content.PreviousClose;
     $.productChange.text = content.Change + ' (' + content.PercentChange + ')';
     $.productChange.color = content.Change[0] == '-' ? Alloy.Globals.colors.red : Alloy.Globals.colors.green;
+    $.priceAndChange.remove($.viewIndicator);
+    $.priceAndChange.setHeight(Ti.UI.SIZE);
 }
 
 function yahooPerformance(data) {

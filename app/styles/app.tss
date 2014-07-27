@@ -57,3 +57,10 @@
     height: 1,
     width: "100%",
 }
+
+".view-indicator": {
+    backgroundColor: Alloy.Globals.colors.blue,
+    borderRadius: 5,
+    height: 56,
+    width: 56,
+}

@@ -33,6 +33,11 @@
     top: 20
 }
 
+".price-change": {
+    height: 56,
+    layout: "vertical"
+}
+
 ".product-change": {
     font: Alloy.Globals.fonts.secondary.header5.regular,
 }
