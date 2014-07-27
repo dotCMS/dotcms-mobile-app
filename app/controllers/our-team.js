@@ -25,8 +25,8 @@ var createHeaderView = function(date) {
     return view;
 }
 
+var allSections = [];
 var ourTeamParse = function(data) {
-    var allSections = [];
     var indexLetters = [];
     var contentlets = data.contentlets;
     var ourTeamData = [];
@@ -71,8 +71,9 @@ var ourTeamParse = function(data) {
                    text: item.jobTitle
             },
             properties: {
-                searchableText: item.firstName + ' ' + item.lastName
-            }
+                searchableText: item.firstName + ' ' + item.lastName,
+            },
+            detail: item
         });
     });
 
@@ -82,19 +83,16 @@ var ourTeamParse = function(data) {
     $.ourTeam.setSections(allSections);
     $.ourTeam.addEventListener('itemclick', ourTeamDetail);;
 
-    // TODO: height is not ok, thats why we are manually adding it
-    // var listViewHeight = (contentlets.length * 50) + (allSections.length * 22);
-    // $.ourTeam.height = listViewHeight;
-
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);
 }
 
 var ourTeamDetail = function(e) {
+    var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).detail;
     Alloy.Globals.openWindow({
-        id: 'out-team-detail',
-        title: e.row.detail.title,
-        detail: e.row.detail
+        id: 'our-team-detail',
+        title: detail.firstName + ' ' + detail.lastName,
+        content: detail
     });
 }
 
