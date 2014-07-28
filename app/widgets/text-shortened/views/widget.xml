@@ -1,0 +1,7 @@
+<Alloy>
+    <Label id="contentText" class="content-text" />
+    <View id="moreWrapper" class="more-wrapper">
+        <View id="moreDottedLine" class="dotted-line" />
+        <Button id="btnMore" class="btn-more" title="MORE" />
+    </View>
+</Alloy>

@@ -5,17 +5,10 @@ var standardWinView = $.args.standardWinView;
 var content = $.args.content;
 
 $.productTitle.text = $.args.title.toUpperCase();
-$.productDesc.text = Alloy.Globals.stripHtml(content.summary);
+$.textShortened.load(Alloy.Globals.stripHtml(content.summary));
 
 // Opening the window when all the content is ready
 Alloy.Globals.navcontroller.open(standardWinView);
-
-$.btnMore.addEventListener('click', toggleMoreInfo);
-function toggleMoreInfo() {
-    $.productDesc.height = $.productDesc.getHeight() == 135 ? Ti.UI.SIZE : 135;
-    $.productDesc.ellipsize = $.productDesc.getEllipsize() ? false : true;
-    $.btnMore.title = $.btnMore.getTitle() == 'MORE' ? 'LESS' : 'MORE';
-}
 
 function yahooInfoParse(data) {
     var content = data.query.results.quote;

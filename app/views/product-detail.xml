@@ -11,10 +11,6 @@
             <Label id="productPrice" class="product-price" />
             <Label id="productChange" class="product-change" />
         </View>
-        <Label id="productDesc" class="product-description" />
-        <View id="moreWrapper" class="more-wrapper">
-            <View id="moreDottedLine" class="dotted-line" />
-            <Button id="btnMore" class="btn-more" title="MORE" />
-        </View>
+        <Widget id="textShortened" src="text-shortened" />
     </ScrollView>
 </Alloy>

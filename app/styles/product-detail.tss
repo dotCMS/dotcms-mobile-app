@@ -2,28 +2,10 @@
     left: 0
 }
 
-".btn-more": {
-    backgroundColor: Alloy.Globals.colors.white,
-    color: Alloy.Globals.colors.blue,
-    font: Alloy.Globals.fonts.primary.body2.regular,
-    height: 44,
-    right: 0,
-}
-
 ".content": {
     contentWidth: "100%",
     left: 15,
     right: 15
-}
-
-".more-wrapper": {
-    backgroundColor: "transparent",
-    height: Ti.UI.SIZE,
-    top: -5
-}
-
-"#moreDottedLine": {
-    right: 50
 }
 
 ".page-title": {
@@ -52,9 +34,4 @@
     bottom: 5,
     left: 0,
     font: Alloy.Globals.fonts.primary.body2.regular,
-}
-
-".product-description": {
-    height: 135,
-    ellipsize: true,
 }
