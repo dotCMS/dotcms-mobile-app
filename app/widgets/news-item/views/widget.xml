@@ -10,7 +10,7 @@
             <View id="newActions" class="new-actions">
                 <View id="commentsButton" class="btn-view">
                     <ImageView id="commentsIcon" class="icn" image="/images/icn-comments.png" />
-                    <Label id="comments" class="btn-label" text="Comments" />
+                    <Label id="comments" class="btn-label" />
                 </View>
                 <View class="separator" />
                 <View id="shareButton" class="btn-view">

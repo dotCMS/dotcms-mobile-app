@@ -8,12 +8,12 @@
 }
 
 ".btn-label": {
-    font: Alloy.Globals.fonts.secondary.body2.regular,
-    left: 26
+    font: Alloy.Globals.fonts.secondary.body1.regular,
+    left: 35
 }
 
 ".btn-read": {
-    font: Alloy.Globals.fonts.secondary.body2.regular,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
     color: Alloy.Globals.colors.blue,
     height: 44,
     right: 10,
@@ -36,9 +36,9 @@
 }
 
 ".icn": {
-    height: 20,
+    height: 21,
     left: 0,
-    width: 20
+    width: 26
 }
 
 ".item-wrapper": {
@@ -90,8 +90,8 @@
 ".separator": {
     backgroundColor: Alloy.Globals.colors.blueLight,
     bottom: 10,
-    left: 8,
-    right: 8,
+    left: 10,
+    right: 10,
     top: 10,
     width: 1
 }

@@ -8,13 +8,13 @@ var newsParse = function(data) {
     var newsData = [];
     _.each(contentlets, function(newitem) {
         var row = Alloy.createWidget('news-item', {
-            title: newitem.title,
+            commentscount: newitem.commentscount,
             date: moment(newitem.sysPublishDate).format('MMMM Do YYYY'),
+            id: newitem.identifier,
             image: 'http://demo.dotcms.com/contentAsset/image/' + newitem.inode + '/image/byInode/1/filter/Resize/resize_w/400',
             lead: newitem.lead,
-            id: newitem.identifier
+            title: newitem.title
         }).getView();
-        //$.resetClass(row, 'newitem-row');
         row.addEventListener('click', newDetail);
         newsData.push(row);
     });
@@ -29,7 +29,7 @@ var newDetail = function(e) {
     Alloy.Globals.openWindow({
         id: 'new-detail',
         title: e.row.detail.title,
-        detail: e.row.detail
+        content: e.row.detail
     });
 }
 
