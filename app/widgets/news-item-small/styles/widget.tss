@@ -5,7 +5,7 @@
     height: Ti.UI.SIZE,
 }
 
-".date": {
+".new-date": {
     bottom: 5,
     color: Alloy.Globals.colors.gray,
     font: Alloy.Globals.fonts.secondary.body1.regular,
@@ -13,18 +13,18 @@
     top: -5
 }
 
-".image": {
+".new-image": {
     defaultImage: "images/default-image.gif",
     left: 15,
     top: 5,
     width: 75
 }
 
-".item-wrapper": {
+".new-item-wrapper": {
     height: Ti.UI.SIZE,
 }
 
-".title": {
+".new-title": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.primary.header5.bold,
     left: 0,

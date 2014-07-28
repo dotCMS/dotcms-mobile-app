@@ -1,17 +1,23 @@
+// TODO:
+// Add comments
+
 $.args = arguments[0] || {};
+var standardWinView = $.args.standardWinView;
 var content = $.args.content;
 
+var byline = content.byline;
 var commentscount = content.commentscount;
 var date = moment(content.sysPublishDate).format('MMMM Do YYYY');
-var id = content.id;
 var image = Alloy.Globals.dotcms.url + '/contentAsset/image/' + content.inode + '/image/byInode/1/filter/Resize/resize_w/400';
-var lead = content.lead || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+var story = Alloy.Globals.stripHtml(content.story);
 var title = content.title;
 
-$.newComments.text = commentscount;
+$.newByLine.text = byline;
+$.newCommnets.text = commentscount;
 $.newDate.text = date;
 $.newImage.image = image;
-$.newLead.text = lead;
-$.newRow.content = content;
-$.newRow.id = id;
+$.newStory.text = story;
 $.newTitle.text = title;
+
+// Opening the window when all the content is ready
+Alloy.Globals.navcontroller.open(standardWinView);

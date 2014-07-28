@@ -6,7 +6,7 @@ var aboutUsParse = function(data) {
     var aboutUsHtml = data.contentlets[0].body;
     var imageUrl = aboutUsHtml.match(/"([^>]+)/g)[0];
 
-    $.aboutImage.image = 'http://demo.dotcms.com/contentAsset/image/7de092d3-d051-4898-8623-48113b4ec1ca/fileAsset/byInode/1/filter/Resize/resize_w/700';
+    $.aboutImage.image = Alloy.Globals.dotcms.url + '/contentAsset/image/7de092d3-d051-4898-8623-48113b4ec1ca/fileAsset/byInode/1/filter/Resize/resize_w/700';
     $.title.text = pageTitle;
     $.aboutBody.text = Alloy.Globals.stripHtml(aboutUsHtml);
 

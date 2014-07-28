@@ -1,19 +1,8 @@
 <Alloy>
-    <ScrollView id="homeContent" class="home-content">
+    <ScrollView id="content" class="content">
         <View class="home-quotes-wrapper">
             <View id="homeQuotes" class="home-quotes" />
         </View>
-        <ListView id="homeNews" class="home-news" defaultItemTemplate="template">
-            <Templates>
-                <ItemTemplate name="template" id="ItemTemplate" class="news-item-wrapper">
-                    <ImageView bindId="newsImage" id="newsImage" class="news-image" />
-                    <View id="contentWrapper" class="content-wrapper">
-                        <Label bindId="newsTitle" id="newsTitle" class="news-title" />
-                        <Label bindId="newsDate" id="newsDate" class="news-date" />
-                    </View>
-                </ItemTemplate>
-            </Templates>
-            <ListSection id="homeNewsSection" class="home-news-section" />
-        </ListView>
+        <TableView id="homeNews" class="home-news">
     </ScrollView>
 </Alloy>

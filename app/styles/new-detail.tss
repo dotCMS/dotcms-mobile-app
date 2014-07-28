@@ -1,0 +1,50 @@
+".content": {
+    contentWidth: "100%",
+    left: 15,
+    right: 15
+}
+
+"#newByLine": {
+    ellipsize: true,
+    width: 110
+}
+
+".new-comments-icn": {
+    height: 16,
+    right: 4,
+    width: 20
+}
+
+".new-image": {
+    bottom: 10,
+    width: Ti.UI.FILL,
+    defaultImage: "/images/default-image.gif"
+}
+
+".new-info": {
+    bottom: 20,
+    height: Ti.UI.SIZE,
+    layout: "horizontal"
+}
+
+".new-info-label": {
+    color: Alloy.Globals.colors.gray,
+    font: Alloy.Globals.fonts.secondary.body2.regular,
+    height: 20
+}
+
+".new-info-separator": {
+    backgroundColor: Alloy.Globals.colors.gray,
+    borderRadius: 3,
+    left: 5,
+    height: 6,
+    right: 5,
+    width: 6,
+}
+
+".new-title": {
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.primary.header5.bold,
+    left: 0,
+    top: 10
+}

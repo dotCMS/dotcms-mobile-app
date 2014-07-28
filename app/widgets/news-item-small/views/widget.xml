@@ -1,9 +1,9 @@
 <Alloy>
-    <TableViewRow class="item-wrapper" id="row">
-        <ImageView id="image" class="image" />
+    <TableViewRow class="new-item-wrapper" id="newRow">
+        <ImageView id="newImage" class="new-image" />
         <View id="contentWrapper" class="content-wrapper">
-            <Label id="title" class="title" />
-            <Label id="date" class="date" />
+            <Label id="newTitle" class="new-title" />
+            <Label id="newDate" class="new-date" />
         </View>
     </TableViewRow>
 </Alloy>

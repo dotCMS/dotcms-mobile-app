@@ -1,16 +1,16 @@
 <Alloy>
-    <TableViewRow id="row">
+    <TableViewRow id="newRow">
         <View class="item-wrapper">
             <View id="contentInfo" class="content-info">
-                <Label id="title" class="new-title" />
-                <Label id="date" class="new-date" />
-                <Label id="lead" class="new-lead" />
+                <Label id="newTitle" class="new-title" />
+                <Label id="newDate" class="new-date" />
+                <Label id="newLead" class="new-lead" />
             </View>
-            <ImageView id="image" class="new-image" />
+            <ImageView id="newImage" class="new-image" />
             <View id="newActions" class="new-actions">
                 <View id="commentsButton" class="btn-view">
                     <ImageView id="commentsIcon" class="icn" image="/images/icn-comments.png" />
-                    <Label id="comments" class="btn-label" />
+                    <Label id="newComments" class="btn-label" />
                 </View>
                 <View class="separator" />
                 <View id="shareButton" class="btn-view">
