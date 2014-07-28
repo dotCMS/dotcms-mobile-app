@@ -4,36 +4,19 @@
     right: 15
 }
 
-"#newByLine": {
-    ellipsize: true,
-    width: 110
-}
-
-".new-comments-icn": {
-    height: 16,
-    right: 4,
-    width: 20
-}
-
-".new-image": {
+".event-info": {
     bottom: 10,
-    width: Ti.UI.FILL,
-    defaultImage: "/images/default-image.gif"
-}
-
-".new-info": {
-    bottom: 20,
     height: Ti.UI.SIZE,
     layout: "horizontal"
 }
 
-".new-info-label": {
+".event-info-label": {
     color: Alloy.Globals.colors.gray,
     font: Alloy.Globals.fonts.secondary.body2.regular,
     height: 20
 }
 
-".new-title": {
+".event-title": {
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.primary.header5.bold,
     left: 0,

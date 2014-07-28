@@ -15,6 +15,5 @@
                 </View>
             </ItemTemplate>
         </Templates>
-        <!-- <ListSection id="eventsSection" class="events-section" /> -->
     </ListView>
 </Alloy>

@@ -1,8 +1,6 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
-var moment = require('alloy/moment');
-
 var createHeaderView = function(date) {
     // TODO: move this to a widget maybe?
     var label = Ti.UI.createLabel({
@@ -25,8 +23,8 @@ var createHeaderView = function(date) {
     return view;
 }
 
+var allSections = [];
 var eventsParse = function(data) {
-    var allSections = [];
     var contentlets = data.contentlets;
     var eventsData = [];
     var oldDate = _.first(contentlets).startDate;
@@ -57,7 +55,8 @@ var eventsParse = function(data) {
             eventDesc: {
                 text: Alloy.Globals.stripHtml(item.description)
             },
-            id: item.identifier
+            id: item.identifier,
+            content: item
         });
     });
     $.events.setSections(allSections);
@@ -69,10 +68,11 @@ var eventsParse = function(data) {
 }
 
 var eventDetail = function(e) {
+    var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).content;
     Alloy.Globals.openWindow({
         id: 'event-detail',
-        title: e.row.detail.title,
-        detail: e.row.detail
+        title: detail.title,
+        content: detail
     });
 }
 

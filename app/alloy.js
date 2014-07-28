@@ -10,6 +10,8 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+var moment = require('alloy/moment');
+
 //Dotcms env
 Alloy.Globals.dotcms = {
     url: 'http://localhost:8080',

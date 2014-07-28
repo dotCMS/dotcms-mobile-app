@@ -29,7 +29,7 @@
 }
 
 ".event-item": {
-    height: Ti.UI.SIZE,
+    height: 80,
 }
 
 ".event-item-wrapper": {
@@ -55,6 +55,8 @@
 }
 
 ".event-title": {
+    height: 45,
+    ellipsize: true,
     color: Alloy.Globals.colors.blue,
     font: Alloy.Globals.fonts.primary.header5.bold,
     left: 0,

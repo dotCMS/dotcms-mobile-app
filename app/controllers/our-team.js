@@ -1,8 +1,6 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
-var moment = require('alloy/moment');
-
 var createHeaderView = function(date) {
     // TODO: move this to a widget maybe?
     var label = Ti.UI.createLabel({

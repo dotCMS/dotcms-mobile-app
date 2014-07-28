@@ -1,47 +1,6 @@
-".action-label": {
-    color: Alloy.Globals.colors.blue,
-    font: Alloy.Globals.fonts.secondary.header5.regular,
-    height: Ti.UI.SIZE,
-    left: 52
-}
-
-".action-icon": {
-    backgroundColor: Alloy.Globals.colors.blue,
-    borderRadius: 22,
-    height: 44,
-    left: 0,
-    width: 44,
-}
-
-".action-view": {
-    bottom: 5,
-    height: 44,
-    top: 5
-}
-
 ".content": {
     left: 15,
     right: 15
-}
-
-".icon-email": {
-    image: "/images/icn-email.png",
-    width: 26
-}
-
-".icon-contacts": {
-    image: "/images/icn-contacts.png",
-    width: 22
-}
-
-".icon-phone": {
-    image: "/images/icn-phone.png",
-    width: 24
-}
-
-".icon-share": {
-    image: "/images/icn-share-white.png",
-    width: 23
 }
 
 ".team-member-avatar": {
