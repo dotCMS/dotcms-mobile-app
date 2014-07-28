@@ -8,6 +8,7 @@
     "os:ios": {},
     "os:mobileweb": {},
     "dependencies": {
+        "com.prodz.tiflexigrid": "1.2",
         "header": "0.1",
         "news-item": "0.1",
         "news-item-small": "0.1",

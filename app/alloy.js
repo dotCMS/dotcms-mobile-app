@@ -48,6 +48,10 @@ Alloy.Globals.menuOptions = [
         title: 'Events'
     },
     {
+        id: 'gallery',
+        title: 'Gallery'
+    },
+    {
         id: 'contact-us',
         title: 'Contact Us'
     }

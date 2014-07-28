@@ -35,7 +35,7 @@ var eventsParse = function(data) {
     _.each(contentlets, function(item, index) {
         if (oldDate != item.startDate) {
             section.setItems(eventsData);
-            allSections.push(section)
+            allSections.push(section);
             section = Ti.UI.createListSection({
                 headerView: createHeaderView(moment(item.startDate).format('MMMM D, YYYY'))
             });

@@ -1,8 +1,8 @@
 ".menu-item-label": {
-    bottom: 5,
+    bottom: 3,
     color: Alloy.Globals.colors.white,
     font: Alloy.Globals.fonts.secondary.header2.regular,
-    top: 5,
+    top: 3,
 }
 
 ".menu-options": {

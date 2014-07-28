@@ -1,0 +1,15 @@
+".img-container": {
+    clipMode: 1
+}
+
+".main-view": {
+    backgroundColor: 'transparent',
+    height: Ti.UI.FILL,
+    layout: 'vertical',
+    width: Ti.UI.FILL,
+    zIndex: 0
+},
+
+".thumb": {
+    width: 260
+}
