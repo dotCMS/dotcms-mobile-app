@@ -49,7 +49,14 @@ Alloy.Globals.menuOptions = [
     },
     {
         id: 'gallery',
-        title: 'Gallery'
+        title: 'Gallery',
+        header: {
+            buttons: {
+                icon: 'plus',
+                id: 'gallery-upload',
+                title: 'Upload content to gallery'
+            }
+        }
     },
     {
         id: 'contact-us',
@@ -72,6 +79,11 @@ Alloy.Globals.openWindow = function(option) {
     option.standardWinView = standardWinView;
     var homeContent = Alloy.createController(option.id, option);
     standardWin.setMainContent(homeContent.getView());
+
+    // Setting the header right button
+    if (_.isObject(option.header)) {
+        standardWin.setHeaderButtons(option.header.buttons);
+    }
 }
 
 
@@ -89,6 +101,7 @@ Alloy.Globals.stripHtml = function(content) {
 
 // Colors
 Alloy.Globals.colors = {
+    black: '#000000',
     blue: '#26333F',
     blueLight: '#9FC5E2',
     blueLightest: '#ECF3F9',

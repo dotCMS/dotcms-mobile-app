@@ -15,3 +15,19 @@ $.backMenu.addEventListener('singletap', function() {
 $.showBackButton = function() {
     $.backMenu.visible = true;
 }
+
+$.setButtons = function(button) {
+    $.righButton.backgroundImage = '/images/icn-header-' + button.icon + '.png';
+    $.righButton.visible = true;
+
+    $.righButton.addEventListener('singletap', function() {
+        openController(button);
+    });
+}
+
+var openController = function(button) {
+    Alloy.Globals.openWindow({
+        id: button.id,
+        title: button.title
+    });
+}

@@ -5,6 +5,10 @@ $.setMainContent = function(contentView) {
     $.standardView.add(contentView);
 }
 
+$.setHeaderButtons = function(button) {
+    $.header.setButtons(button);
+}
+
 function slideNav() {
     $.slideMenu.toggleMenu();
 }
@@ -13,4 +17,5 @@ function slideNav() {
 if (Alloy.Globals.navcontroller.windowsInfo().stackLength > 0) {
     $.header.showBackButton();
 }
+
 

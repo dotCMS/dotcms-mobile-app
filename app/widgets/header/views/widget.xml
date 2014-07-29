@@ -3,5 +3,6 @@
         <Button id="toggleMenu" class="toggle-menu" />
         <Button id="backMenu" class="back-menu" />
         <ImageView id="logo" class="logo" />
+        <Button id="righButton" class="right-button" />
     </View>
 </Alloy>

@@ -4,7 +4,12 @@ var galleryData = [];
 var galleryItems = [];
 
 var photoGalleryDetail = function(e){
-    alert(e.source.data.inode);
+    var detailWindow = Alloy.createController('gallery-detail',  {
+        inode: e.source.data.inode
+    });
+    var detailWindowView = detailWindow.getView();
+    detailWindowView.title = "Whatever";
+    Alloy.Globals.navcontroller.open(detailWindowView);
 };
 
 $.fg.init({

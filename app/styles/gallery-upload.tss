@@ -1,0 +1,46 @@
+".image": {
+    bottom: 10,
+    height: Ti.UI.SIZE,
+    top: 5,
+    width: 310
+}
+
+".field": {
+    borderColor: Alloy.Globals.colors.gray,
+    borderRadius: 5,
+    borderWidth: 1,
+    font: Alloy.Globals.fonts.secondary.body2.regular,
+    left: 0,
+    right: 0,
+    width: Ti.UI.FILL,
+}
+
+".field-label": {
+    color: Alloy.Globals.colors.gray,
+    font: Alloy.Globals.fonts.secondary.mouse.regular,
+    left: 0
+}
+
+".form": {
+    bottom: 20,
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+    left: 15,
+    right: 15
+}
+
+"#textArea": {
+    bottom: 10,
+    height: 85
+}
+
+"#textField": {
+    bottom: 10,
+    height: 44,
+    paddingLeft: 5,
+    paddingRight: 5
+}
+
+"#uploadImg": {
+    image: "/images/icn-upload.png"
+}

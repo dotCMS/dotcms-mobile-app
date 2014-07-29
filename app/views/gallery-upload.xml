@@ -1,0 +1,17 @@
+<Alloy>
+    <ScrollView id="content" class="content">
+        <ImageView id="image" class="image" />
+        <View id="form" class="form">
+            <Label id="imageTitle" class="field-label" text="IMAGE TITLE:" />
+            <TextField id="textField" hintText="economy.jpg" class="field" />
+            <Label id="imageTitle" class="field-label" text="DESCRIPTION:" />
+            <TextArea id="textArea" class="field" />
+            <View id="upload" class="action-view">
+                <View id="uploadIcon" class="action-icon">
+                    <ImageView id="uploadImg" class="icon-share" />
+                </View>
+                <Label id="uploadLabel" class="action-label" text="Upload and Publish" />
+            </View>
+        </View>
+    </ScrollView>
+</Alloy>

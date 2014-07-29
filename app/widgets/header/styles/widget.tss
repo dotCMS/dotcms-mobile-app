@@ -1,3 +1,11 @@
+".back-menu": {
+    backgroundImage: "/images/back-icon.png",
+    left: 44,
+    height: 44,
+    visible: false,
+    width: 30
+}
+
 ".header": {
     backgroundColor: Alloy.Globals.colors.headerBg,
     height: 44,
@@ -10,17 +18,16 @@
     width: 125,
 }
 
+".right-button": {
+    height: 44,
+    right: 5,
+    visible: false,
+    width: 44
+}
+
 ".toggle-menu": {
     backgroundImage: "/images/menu-icon.png",
     height: 44,
     left: 3,
     width: 44
-}
-
-".back-menu": {
-    backgroundImage: "/images/back-icon.png",
-    left: 44,
-    height: 44,
-    visible: false,
-    width: 30
 }
