@@ -3,6 +3,6 @@
         <View class="home-quotes-wrapper">
             <View id="homeQuotes" class="home-quotes" />
         </View>
-        <TableView id="homeNews" class="home-news">
+        <TableView id="homeNews" class="home-news" />
     </ScrollView>
 </Alloy>

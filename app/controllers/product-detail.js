@@ -1,4 +1,5 @@
-$.activityIndicator.show();
+$.loaderIndicator.style = Alloy.Globals.isAndroid ? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.iPhone.ActivityIndicatorStyle.DARK;
+$.loaderIndicator.show();
 
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
@@ -21,7 +22,6 @@ function yahooInfoParse(data) {
 
 function yahooPerformance(data) {
     var content = data.query.results.quote;
-    console.log(content);
 }
 
 var HTTPClient = require('HTTPClient');

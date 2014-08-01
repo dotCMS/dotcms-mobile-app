@@ -14,7 +14,7 @@ var moment = require('alloy/moment');
 
 //Dotcms env
 Alloy.Globals.dotcms = {
-    url: 'http://localhost:8080',
+    url: 'http://10.0.1.11:8080',
     hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
     yahooApi: 'http://query.yahooapis.com/v1/public/yql?'
 }
@@ -58,10 +58,10 @@ Alloy.Globals.menuOptions = [
             }
         }
     },
-    {
-        id: 'contact-us',
-        title: 'Contact Us'
-    }
+    // {
+    //     id: 'contact-us',
+    //     title: 'Contact Us'
+    // }
 ];
 
 // Creating NavigationController as a global object
@@ -88,8 +88,10 @@ Alloy.Globals.openWindow = function(option) {
 
 
 // Utils
-Alloy.Globals.screenWidth = Ti.Platform.osname == 'android' ? Ti.Platform.displayCaps.platformWidth / (Titanium.Platform.displayCaps.dpi / 160) : Ti.Platform.displayCaps.platformWidth
 Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
+Alloy.Globals.platformWidth = Ti.Platform.displayCaps.platformWidth;
+Alloy.Globals.screenWidth = Alloy.Globals.isAndroid ? Ti.Platform.displayCaps.platformWidth / (Titanium.Platform.displayCaps.dpi / 160) : Ti.Platform.displayCaps.platformWidth;
+
 
 // TODO: find a better way to parse/encode HTML
 Alloy.Globals.stripHtml = function(content) {
@@ -108,7 +110,7 @@ Alloy.Globals.colors = {
     green: '#7ED321',
     red: '#D0021B',
     white: 'white',
-    gray: '89939C'
+    gray: '#89939C'
 }
 Alloy.Globals.colors.slideMenuBg = Alloy.Globals.colors.blue;
 Alloy.Globals.colors.headerBg = Alloy.Globals.colors.blue;
@@ -162,5 +164,8 @@ var buildFonts = function () {
     });
     return fonts;
 }
+
+// Margins
+Alloy.Globals.margin = 15;
 
 Alloy.Globals.fonts = buildFonts();

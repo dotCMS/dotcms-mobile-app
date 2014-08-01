@@ -25,9 +25,17 @@
 }
 
 ".product-price": {
-    height: 72,
     font: Alloy.Globals.fonts.secondary.productPrice.regular,
     color: Alloy.Globals.colors.blueLight
+}
+
+".product-price[platform=ios]": {
+    height: 72
+}
+
+".product-price[platform=android]": {
+    bottom: -40,
+    top: -40
 }
 
 ".product-title": {

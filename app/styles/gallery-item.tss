@@ -2,6 +2,11 @@
     clipMode: 1
 }
 
+".img-container[platform=android]": {
+    borderColor: Alloy.Globals.colors.blueLight,
+    borderWidth: 1
+}
+
 ".main-view": {
     backgroundColor: 'transparent',
     height: Ti.UI.FILL,

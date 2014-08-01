@@ -20,6 +20,10 @@
     text: "Read full article"
 }
 
+".btn-read[platform=android]": {
+    backgroundColor: "transparent"
+}
+
 ".content-wrapper": {
     layout: "vertical",
     width: 205,
@@ -66,9 +70,14 @@
 }
 
 ".new-image": {
-    width: 320,
     height: 220,
-    defaultImage: "images/default-image.gif"
+    defaultImage: "/images/default-image.gif",
+    width: 320
+}
+
+".new-image[platform=android]": {
+    height: 240,
+    width: Ti.UI.SIZE
 }
 
 ".new-lead": {
@@ -77,6 +86,10 @@
     left: 10,
     right: 10,
     top: -15
+}
+
+".new-lead[platform=android]": {
+    height: 70
 }
 
 ".new-title": {

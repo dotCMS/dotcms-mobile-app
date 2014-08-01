@@ -4,7 +4,7 @@ var content = $.args.content;
 var commentscount = content.commentscount;
 var date = moment(content.sysPublishDate).format('MMMM Do YYYY');
 var id = content.id;
-var image = Alloy.Globals.dotcms.url + '/contentAsset/image/' + content.inode + '/image/byInode/1/filter/Resize/resize_w/400';
+var image = Alloy.Globals.dotcms.url + '/contentAsset/image/' + content.inode + '/image/byInode/1/filter/Resize/resize_w/' + Alloy.Globals.platformWidth;
 var lead = content.lead || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 var title = content.title;
 

@@ -11,11 +11,17 @@ var createHeaderView = function(date) {
         text: date,
         top: 3,
     });
+
     var inner = Ti.UI.createView({
         left: 15,
         backgroundColor: Alloy.Globals.colors.blueLightest,
         height: 22,
     });
+
+    if (Alloy.Globals.isAndroid) {
+        label.top = -6;
+        inner.left = 0;
+    }
     var view = Ti.UI.createView();
     inner.add(label);
     view.add(inner);

@@ -7,15 +7,23 @@ var productsParse = function(data) {
     var productsData = [];
     _.each(contentlets, function(product) {
         var row = Titanium.UI.createTableViewRow({
-            title: product.title,
             detail: product
         });
-        var rowClass = 'product-row';
+
         if (Alloy.Globals.isAndroid) {
-            row.className = rowClass;
+            var label = Ti.UI.createLabel({
+                color: Alloy.Globals.colors.blue,
+                font: Alloy.Globals.fonts.secondary.body1.regular,
+                height: 44,
+                left: Alloy.Globals.margin,
+                text: product.title
+            });
+            row.add(label);
         } else {
-            $.resetClass(row, rowClass);
+            $.resetClass(row, 'product-row');
         }
+
+        row.title = product.title;
         row.addEventListener('click', productDetail);
         productsData.push(row);
     });

@@ -88,6 +88,10 @@
     width: 6,
 }
 
+".disc-separator[platform=android]": {
+    top: 10
+}
+
 ".icon-add": {
     image: "/images/icn-add.png",
     width: 23
