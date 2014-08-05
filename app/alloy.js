@@ -14,10 +14,10 @@ var moment = require('alloy/moment');
 
 //Dotcms env
 Alloy.Globals.dotcms = {
-    url: 'http://10.0.1.11:8080',
+    url: 'http://demo.dotcms.com',
     hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
     yahooApi: 'http://query.yahooapis.com/v1/public/yql?'
-}
+};
 
 // Menu options
 // The id is the name of the controller
@@ -84,7 +84,7 @@ Alloy.Globals.openWindow = function(option) {
     if (_.isObject(option.header)) {
         standardWin.setHeaderButtons(option.header.buttons);
     }
-}
+};
 
 
 // Utils
@@ -99,7 +99,7 @@ Alloy.Globals.stripHtml = function(content) {
     stripped = stripped.replace('\n', '');
     stripped = stripped.replace('—&nbsp;', '— ');
     return stripped;
-}
+};
 
 // Colors
 Alloy.Globals.colors = {
@@ -111,7 +111,7 @@ Alloy.Globals.colors = {
     red: '#D0021B',
     white: 'white',
     gray: '#89939C'
-}
+};
 Alloy.Globals.colors.slideMenuBg = Alloy.Globals.colors.blue;
 Alloy.Globals.colors.headerBg = Alloy.Globals.colors.blue;
 
@@ -163,7 +163,7 @@ var buildFonts = function () {
         });
     });
     return fonts;
-}
+};
 
 // Margins
 Alloy.Globals.margin = 15;

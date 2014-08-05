@@ -16,12 +16,12 @@ function createRow(option) {
     });
     var label = Ti.UI.createLabel({
         text: option.title,
-    })
+    });
     $.resetClass(label, 'menu-item-label');
     row.add(label);
     row.addEventListener('click', function() {
         Ti.App.fireEvent('openSection', option);
-    })
+    });
     menuRows.push(row);
 }
 
@@ -35,7 +35,7 @@ function populateMenu() {
 $.setMainContainer = function(container) {
     mainContainer = container;
     mainContainer.left = 0;
-}
+};
 
 $.toggleMenu = function () {
     if (animateLeftPanel) {
@@ -58,7 +58,7 @@ $.toggleMenu = function () {
     mainContainer.animate(mainContainerAnimation, function() {
         mainContainer.left = mainContainerPosition;
     });
-}
+};
 
 populateMenu();
 Ti.App.addEventListener('toggleSlide', $.toggleMenu);

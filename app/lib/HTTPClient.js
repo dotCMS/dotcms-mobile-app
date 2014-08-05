@@ -17,7 +17,7 @@ HTTPClient.makeRequest = function(url, callback) {
     client.open('GET', url);
     // Send the request.
     client.send();
-}
+};
 
 HTTPClient.contentAPI = function(structure, orderBy, callback, identifier) {
     var identifierQuery = identifier ? '%20+identifier:' + identifier : '';
@@ -25,6 +25,6 @@ HTTPClient.contentAPI = function(structure, orderBy, callback, identifier) {
     var order = orderBy ? structure + '.' + orderBy : 'modDate%20desc';
     var url = Alloy.Globals.dotcms.url + '/api/content/limit/0/render/false/query/+structureName:' + structureName + '%20+(conhost:' + Alloy.Globals.dotcms.hostId + '%20conhost:SYSTEM_HOST)' + identifierQuery + '%20+languageId:1*%20+deleted:false%20%20+working:true/orderby/' + order;
     this.makeRequest(url, callback);
-}
+};
 
 module.exports = HTTPClient;

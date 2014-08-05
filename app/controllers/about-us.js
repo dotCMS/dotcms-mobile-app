@@ -12,7 +12,7 @@ var aboutUsParse = function(data) {
 
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.contentAPI('', '', aboutUsParse, '767509b1-2392-4661-a16b-e0e31ce27719');

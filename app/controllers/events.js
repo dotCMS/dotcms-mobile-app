@@ -27,7 +27,7 @@ var createHeaderView = function(date) {
     view.add(inner);
 
     return view;
-}
+};
 
 var allSections = [];
 var eventsParse = function(data) {
@@ -71,7 +71,7 @@ var eventsParse = function(data) {
     // Opening the window when all the content is ready
     // TODO: height is not ok, check that!
     Alloy.Globals.navcontroller.open(standardWinView);
-}
+};
 
 var eventDetail = function(e) {
     var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).content;
@@ -80,7 +80,7 @@ var eventDetail = function(e) {
         title: detail.title,
         content: detail
     });
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.contentAPI('calendarEvent', 'startDate%20desc', eventsParse);

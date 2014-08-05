@@ -18,7 +18,7 @@ var newsParse = function(data) {
 
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);
-}
+};
 
 var newDetail = function(e) {
     Alloy.Globals.openWindow({
@@ -26,7 +26,7 @@ var newDetail = function(e) {
         title: e.row.content.title,
         content: e.row.content
     });
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.contentAPI('News', 'sysPublishDate', newsParse);

@@ -57,7 +57,7 @@ var galleryParse = function(data) {
     Alloy.Globals.navcontroller.open(standardWinView);
 
     $.fg.addGridItems(galleryItems);
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.makeRequest(Alloy.Globals.dotcms.url + '/api/content/limit/0/render/false/type/json/query/+structureName:Document%20+(conhost:48190c8c-42c4-46af-8d1a-0cd5db894797%20conhost:SYSTEM_HOST)%20+Document.metaData:*jpeg**%20+languageId:1%20+deleted:false%20%20+working:true/orderby/modDate%20desc', galleryParse);

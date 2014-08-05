@@ -43,7 +43,7 @@ dialog.addEventListener('click', function(e) {
         //obtain an image from the gallery
         Titanium.Media.openPhotoGallery({
             success: function(event) {
-                proccessImage(event)
+                proccessImage(event);
             },
             cancel: function() {
                 //user cancelled the action fron within

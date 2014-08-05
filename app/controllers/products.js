@@ -32,7 +32,7 @@ var productsParse = function(data) {
 
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);
-}
+};
 
 var productDetail = function(e) {
     Alloy.Globals.openWindow({
@@ -40,7 +40,7 @@ var productDetail = function(e) {
         title: e.row.detail.title,
         content: e.row.detail
     });
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.contentAPI('Products', 'title', productsParse);

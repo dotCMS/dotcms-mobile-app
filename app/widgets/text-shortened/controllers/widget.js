@@ -1,7 +1,7 @@
 $.load = function(content) {
     $.contentText.text = content;
     $.btnMore.addEventListener('click', toggleMoreInfo);
-}
+};
 
 function toggleMoreInfo() {
     $.contentText.height = $.contentText.getHeight() == 135 ? Ti.UI.SIZE : 135;

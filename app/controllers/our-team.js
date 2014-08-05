@@ -21,7 +21,7 @@ var createHeaderView = function(date) {
     view.add(inner);
 
     return view;
-}
+};
 
 var allSections = [];
 var ourTeamParse = function(data) {
@@ -83,7 +83,7 @@ var ourTeamParse = function(data) {
 
     // Opening the window when all the content is ready
     Alloy.Globals.navcontroller.open(standardWinView);
-}
+};
 
 var ourTeamDetail = function(e) {
     var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).detail;
@@ -92,7 +92,7 @@ var ourTeamDetail = function(e) {
         title: detail.firstName + ' ' + detail.lastName,
         content: detail
     });
-}
+};
 
 var HTTPClient = require('HTTPClient');
 HTTPClient.contentAPI('Employee', 'firstName', ourTeamParse);

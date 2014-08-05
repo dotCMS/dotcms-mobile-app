@@ -3,11 +3,11 @@ $.slideMenu.setMainContainer($.standardView);
 
 $.setMainContent = function(contentView) {
     $.standardView.add(contentView);
-}
+};
 
 $.setHeaderButtons = function(button) {
     $.header.setButtons(button);
-}
+};
 
 function slideNav() {
     $.slideMenu.toggleMenu();

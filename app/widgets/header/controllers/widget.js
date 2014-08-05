@@ -1,6 +1,6 @@
 var fireToggleEvent = function() {
     Ti.App.fireEvent('toggleSlide');
-}
+};
 
 $.toggleMenu.addEventListener('singletap', fireToggleEvent);
 
@@ -14,7 +14,7 @@ $.backMenu.addEventListener('singletap', function() {
 
 $.showBackButton = function() {
     $.backMenu.visible = true;
-}
+};
 
 $.setButtons = function(button) {
     $.righButton.backgroundImage = '/images/icn-header-' + button.icon + '.png';
@@ -23,11 +23,11 @@ $.setButtons = function(button) {
     $.righButton.addEventListener('singletap', function() {
         openController(button);
     });
-}
+};
 
 var openController = function(button) {
     Alloy.Globals.openWindow({
         id: button.id,
         title: button.title
     });
-}
+};
