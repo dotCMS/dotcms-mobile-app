@@ -1,6 +1,10 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
+if (!Alloy.Globals.isAndroid) {
+    $.ourTeam.searchView = $.ourTeamSearchBar;
+}
+
 var createHeaderView = function(date) {
     // TODO: move this to a widget maybe?
     var label = Ti.UI.createLabel({
@@ -16,6 +20,11 @@ var createHeaderView = function(date) {
         backgroundColor: Alloy.Globals.colors.blueLightest,
         height: 22,
     });
+
+    if (Alloy.Globals.isAndroid) {
+        label.top = -6;
+        inner.left = 0;
+    }
     var view = Ti.UI.createView();
     inner.add(label);
     view.add(inner);

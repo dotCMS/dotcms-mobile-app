@@ -1,7 +1,7 @@
 <Alloy>
-    <ListView id="ourTeam" class="our-team" defaultItemTemplate="template" searchView="ourTeamSearchBar">
+    <ListView id="ourTeam" class="our-team" defaultItemTemplate="template">
         <SearchBar id="ourTeamSearchBar" class="our-team-search-bar" platform="ios"/>
-        <SearchView ns="Ti.UI.Android" class="our-team-search-bar" platform="android"/>
+        <!-- <SearchView ns="Ti.UI.Android" class="our-team-search-bar" platform="android"/> -->
         <Templates>
             <ItemTemplate name="template" id="ItemTemplate" class="team-member-item">
                 <ImageView bindId="teamMemberAvatar" id="teamMemberAvatar" class="team-member-avatar" />
