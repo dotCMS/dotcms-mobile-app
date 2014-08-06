@@ -1,32 +1,10 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
-var createHeaderView = function(date) {
-    // TODO: move this to a widget maybe?
-    var label = Ti.UI.createLabel({
-        bottom: 3,
-        color: Alloy.Globals.colors.blue,
-        font: Alloy.Globals.fonts.secondary.body1.regular,
-        left: 5,
-        text: date,
-        top: 3,
-    });
-
-    var inner = Ti.UI.createView({
-        left: 15,
-        backgroundColor: Alloy.Globals.colors.blueLightest,
-        height: 22,
-    });
-
-    if (Alloy.Globals.isAndroid) {
-        label.top = -6;
-        inner.left = 0;
-    }
-    var view = Ti.UI.createView();
-    inner.add(label);
-    view.add(inner);
-
-    return view;
+var createHeaderView = function(content) {
+    var sectionHeader = Alloy.createWidget('listview-header');
+    sectionHeader.load(content);
+    return sectionHeader.getView();
 };
 
 var allSections = [];

@@ -1,0 +1,7 @@
+<Alloy>
+    <View id="sectionHeader" class="section-header">
+        <View id="inner" class="inner">
+            <Label id="headerTitle" class="header-title" />
+        </View>
+    </View>
+</Alloy>

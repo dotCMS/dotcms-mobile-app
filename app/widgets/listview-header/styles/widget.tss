@@ -1,0 +1,17 @@
+".header-title": {
+    bottom: 3,
+    color: Alloy.Globals.colors.blue,
+    font: Alloy.Globals.fonts.secondary.body1.regular,
+    left: 5,
+    top: -6
+}
+
+".inner": {
+    backgroundColor: Alloy.Globals.colors.blueLightest,
+    height: 22,
+    left: 15
+}
+
+".inner[platform=android]": {
+    left: 0
+}
