@@ -89,6 +89,7 @@ Alloy.Globals.openWindow = function(option) {
 
 // Utils
 Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
+Alloy.Globals.isiOS = Ti.Platform.osname === 'iphone' || Ti.Platform.osname === 'ipad';
 Alloy.Globals.platformWidth = Ti.Platform.displayCaps.platformWidth;
 Alloy.Globals.screenWidth = Alloy.Globals.isAndroid ? Ti.Platform.displayCaps.platformWidth / (Titanium.Platform.displayCaps.dpi / 160) : Ti.Platform.displayCaps.platformWidth;
 

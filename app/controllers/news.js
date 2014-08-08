@@ -1,7 +1,6 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
-// TODO: check why is returning only 3 news items
 var newsParse = function(data) {
     var contentlets = data.contentlets;
 

@@ -36,18 +36,22 @@ $.share.addEventListener('singletap', function() {
 });
 
 function addNewContact() {
-    if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_AUTHORIZED){
+    if (Alloy.Globals.isAndroid) {
         createNewContact();
-    } else if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_UNKNOWN){
-        Ti.Contacts.requestAuthorization(function(e){
-            if (e.success) {
-                createNewContact();
-            } else {
-                addNewContact();
-            }
-        });
     } else {
-        addNewContact();
+        if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_AUTHORIZED){
+            createNewContact();
+        } else if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_UNKNOWN){
+            Ti.Contacts.requestAuthorization(function(e){
+                if (e.success) {
+                    createNewContact();
+                } else {
+                    addNewContact();
+                }
+            });
+        } else {
+            addNewContact();
+        }
     }
 }
 
