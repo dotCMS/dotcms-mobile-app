@@ -48,12 +48,12 @@ var eventsParse = function(data) {
 
     // Opening the window when all the content is ready
     // TODO: height is not ok, check that!
-    Alloy.Globals.navcontroller.open(standardWinView);
+    Alloy.Globals.openWindow(standardWinView);
 };
 
 var eventDetail = function(e) {
     var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).content;
-    Alloy.Globals.openWindow({
+    Alloy.Globals.winToOpen({
         id: 'event-detail',
         title: detail.title,
         content: detail

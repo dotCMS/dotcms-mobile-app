@@ -12,7 +12,7 @@ var content = $.args.content;
 var standardWinView = $.args.standardWinView;
 
 // Opening the window when all the content is ready
-Alloy.Globals.navcontroller.open(standardWinView);
+Alloy.Globals.openWindow(standardWinView);
 
 $.teamMemberName.text = content.firstName + ' ' + content.lastName;
 $.teamMemberjobTitle.text = content.jobTitle;

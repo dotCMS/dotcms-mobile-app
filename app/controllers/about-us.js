@@ -11,7 +11,7 @@ var aboutUsParse = function(data) {
     $.aboutBody.text = Alloy.Globals.stripHtml(aboutUsHtml);
 
     // Opening the window when all the content is ready
-    Alloy.Globals.navcontroller.open(standardWinView);
+    Alloy.Globals.openWindow(standardWinView);
 };
 
 var HTTPClient = require('HTTPClient');

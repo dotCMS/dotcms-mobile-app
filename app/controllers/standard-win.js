@@ -18,4 +18,28 @@ if (Alloy.Globals.navcontroller.windowsInfo().stackLength > 0) {
     $.header.showBackButton();
 }
 
+Ti.App.addEventListener('showLoading', function() {
+    $.loaderIndicator.show();
+    $.loaderView.visible = true;
+    var a = Titanium.UI.createAnimation({
+        opacity: 1,
+        duration: 200
+    });
+    $.loaderView.animate(a, function() {
+        $.loaderView.opacity = 1;
+    });
+});
+
+Ti.App.addEventListener('hideLoading', function() {
+    $.loaderIndicator.hide();
+    $.loaderView.visible = false;
+
+    var a = Titanium.UI.createAnimation({
+        opacity: 0,
+        duration: 200
+    });
+    $.loaderView.animate(a, function() {
+        $.loaderView.opacity = 0;
+    });
+});
 
