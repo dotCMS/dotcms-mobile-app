@@ -15,7 +15,7 @@ $.eventTime.text = 'From ' + eventStartDate + ' to ' + eventEndDate;
 $.eventTitle.text = content.title;
 $.textShortened.load(Alloy.Globals.stripHtml(content.description));
 
-Alloy.Globals.navcontroller.open(standardWinView);
+Alloy.Globals.openWindow(standardWinView);
 
 $.addToCalendar.addEventListener('click', addToCalendar);
 

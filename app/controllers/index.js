@@ -1,5 +1,5 @@
 // Opening the first window and controller
-Alloy.Globals.openWindow(Alloy.Globals.menuOptions[0]);
+Alloy.Globals.winToOpen(Alloy.Globals.menuOptions[0]);
 
 // From the slide-menu widget trigger this event to open every menu section
 Ti.App.addEventListener('openSection', function(option) {
@@ -8,7 +8,7 @@ Ti.App.addEventListener('openSection', function(option) {
     if (option.first) {
         Alloy.Globals.navcontroller.home();
     } else {
-        Alloy.Globals.openWindow(option);
+        Alloy.Globals.winToOpen(option);
     }
 });
 

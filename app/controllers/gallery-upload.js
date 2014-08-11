@@ -65,7 +65,7 @@ function proccessImage(event) {
     if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
         $.image.image = image;
         // Opening the window when all the content is ready
-        Alloy.Globals.navcontroller.open(standardWinView);
+        Alloy.Globals.openWindow(standardWinView);
     }
 
     var content = {

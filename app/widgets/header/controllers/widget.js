@@ -26,7 +26,7 @@ $.setButtons = function(button) {
 };
 
 var openController = function(button) {
-    Alloy.Globals.openWindow({
+    Alloy.Globals.winToOpen({
         id: button.id,
         title: button.title
     });

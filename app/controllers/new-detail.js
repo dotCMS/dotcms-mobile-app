@@ -20,4 +20,4 @@ $.newStory.text = story;
 $.newTitle.text = title;
 
 // Opening the window when all the content is ready
-Alloy.Globals.navcontroller.open(standardWinView);
+Alloy.Globals.openWindow(standardWinView);

@@ -3,6 +3,18 @@
     navBarHidden: true,
 }
 
+".loader-view": {
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    opacity: 0,
+    visible: false,
+    zIndex: 3
+}
+
+".loader-view-bg[platform=android]": {
+    backgroundColor: Alloy.Globals.colors.black,
+    opacity: 0.8
+}
+
 ".standard-view": {
     backgroundColor: Alloy.Globals.colors.white,
     contentWidth: "100%",

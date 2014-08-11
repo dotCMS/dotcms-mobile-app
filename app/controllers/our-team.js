@@ -70,12 +70,12 @@ var ourTeamParse = function(data) {
     $.ourTeam.addEventListener('itemclick', ourTeamDetail);;
 
     // Opening the window when all the content is ready
-    Alloy.Globals.navcontroller.open(standardWinView);
+    Alloy.Globals.openWindow(standardWinView);
 };
 
 var ourTeamDetail = function(e) {
     var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).detail;
-    Alloy.Globals.openWindow({
+    Alloy.Globals.winToOpen({
         id: 'our-team-detail',
         title: detail.firstName + ' ' + detail.lastName,
         content: detail

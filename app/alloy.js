@@ -70,7 +70,7 @@ var navController = new NavigationController();
 Alloy.Globals.navcontroller = navController;
 
 // Opening new windows
-Alloy.Globals.openWindow = function(option) {
+Alloy.Globals.winToOpen = function(option) {
     var standardWin = Alloy.createController('standard-win');
     var standardWinView = standardWin.getView();
     standardWinView.title = option.title;
@@ -85,6 +85,11 @@ Alloy.Globals.openWindow = function(option) {
         standardWin.setHeaderButtons(option.header.buttons);
     }
 };
+
+Alloy.Globals.openWindow = function(win) {
+    Alloy.Globals.navcontroller.open(win);
+    Ti.App.fireEvent('hideLoading');
+}
 
 
 // Utils

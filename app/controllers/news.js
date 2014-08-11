@@ -16,11 +16,11 @@ var newsParse = function(data) {
     $.news.setData(newsData);
 
     // Opening the window when all the content is ready
-    Alloy.Globals.navcontroller.open(standardWinView);
+    Alloy.Globals.openWindow(standardWinView);
 };
 
 var newDetail = function(e) {
-    Alloy.Globals.openWindow({
+    Alloy.Globals.winToOpen({
         id: 'new-detail',
         title: e.row.content.title,
         content: e.row.content

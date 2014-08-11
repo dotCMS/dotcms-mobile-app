@@ -9,7 +9,7 @@ $.productTitle.text = $.args.title.toUpperCase();
 $.textShortened.load(Alloy.Globals.stripHtml(content.summary));
 
 // Opening the window when all the content is ready
-Alloy.Globals.navcontroller.open(standardWinView);
+Alloy.Globals.openWindow(standardWinView);
 
 function yahooInfoParse(data) {
     var content = data.query.results.quote;

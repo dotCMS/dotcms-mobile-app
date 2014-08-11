@@ -31,11 +31,11 @@ var productsParse = function(data) {
     $.products.setData(productsData);
 
     // Opening the window when all the content is ready
-    Alloy.Globals.navcontroller.open(standardWinView);
+    Alloy.Globals.openWindow(standardWinView);
 };
 
 var productDetail = function(e) {
-    Alloy.Globals.openWindow({
+    Alloy.Globals.winToOpen({
         id: 'product-detail',
         title: e.row.detail.title,
         content: e.row.detail
