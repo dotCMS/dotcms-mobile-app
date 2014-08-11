@@ -1,5 +1,6 @@
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
+var image;
 
 //Create a dialog with options
 var dialog = Titanium.UI.createOptionDialog({
@@ -26,7 +27,9 @@ dialog.addEventListener('click', function(e) {
             },
             error: function(error) {
                 //error happend, create alert
-                var a = Titanium.UI.createAlertDialog({title:'Camera'});
+                var a = Titanium.UI.createAlertDialog({
+                    title: 'Camera'
+                });
                 //set message
                 if (error.code == Titanium.Media.NO_CAMERA) {
                     a.setMessage('Device does not have camera');
@@ -57,13 +60,36 @@ dialog.addEventListener('click', function(e) {
 });
 
 function proccessImage(event) {
-    var image = event.media;
+    image = event.media;
     //checking if it is photo
     if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
         $.image.image = image;
         // Opening the window when all the content is ready
         Alloy.Globals.navcontroller.open(standardWinView);
     }
+
+    var content = {
+        'title': $.textField.getValue() || 'Whattt',
+        'fileName': $.textField.getValue() || 'Whattt',
+        'description1': $.textArea.getValue() || 'Whattt',
+        'fileAsset': Ti.Utils.base64encode(image),
+        'stName': 'Document'
+    };
+    HTTPClient.uploadContent(content);
+}
+
+//$.uploadLabel.addEventListener('click', uploadContent);
+
+var HTTPClient = require('HTTPClient');
+function uploadContent() {
+    var content = {
+        'title': $.textField.getValue() || 'Whattt',
+        'fileName': $.textField.getValue() || 'Whattt',
+        'description1': $.textArea.getValue() || 'Whattt',
+        'fileAsset': image,
+        'stName': 'Document'
+    };
+    HTTPClient.uploadContent(content);
 }
 
 //show dialog
