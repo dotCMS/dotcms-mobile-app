@@ -59,6 +59,9 @@ dialog.addEventListener('click', function(e) {
     }
 });
 
+//show dialog
+dialog.show();
+
 function proccessImage(event) {
     image = event.media;
     //checking if it is photo
@@ -67,30 +70,69 @@ function proccessImage(event) {
         // Opening the window when all the content is ready
         Alloy.Globals.openWindow(standardWinView);
     }
-
-    var content = {
-        'title': $.textField.getValue() || 'Whattt',
-        'fileName': $.textField.getValue() || 'Whattt',
-        'description1': $.textArea.getValue() || 'Whattt',
-        'fileAsset': Ti.Utils.base64encode(image),
-        'stName': 'Document'
-    };
-    HTTPClient.uploadContent(content);
 }
 
-//$.uploadLabel.addEventListener('click', uploadContent);
+$.uploadLabel.addEventListener('click', validateFields);
 
 var HTTPClient = require('HTTPClient');
 function uploadContent() {
     var content = {
-        'title': $.textField.getValue() || 'Whattt',
-        'fileName': $.textField.getValue() || 'Whattt',
-        'description1': $.textArea.getValue() || 'Whattt',
+        'description1': $.fileDescription.getValue(),
         'fileAsset': image,
-        'stName': 'Document'
+        'fileName': createFileName($.fileTitle.getValue()),
+        'hostFolder': 'demo.dotcms.com',
+        'stName': 'Document',
+        'sysPublishDate': new Date(),
+        'title': $.fileTitle.getValue()
     };
-    HTTPClient.uploadContent(content);
+    HTTPClient.uploadContent(content, finishUpload);
 }
 
-//show dialog
-dialog.show();
+function finishUpload() {
+    Ti.App.fireEvent('reloadGallery');
+    Alloy.Globals.navcontroller.close();
+}
+
+$.fileTitle.addEventListener('change', validateTitle);
+$.fileDescription.addEventListener('change', validateDescription);
+
+function validateFields() {
+    if ($.fileTitle.getValue().length > 0 && $.fileDescription.getValue().length > 0) {
+        uploadContent();
+    } else {
+        validateTitle();
+        validateDescription();
+    }
+}
+
+function validateTitle() {
+    if ($.fileTitle.getValue().length == 0) {
+        $.requiredTitle.height = 12;
+        $.requiredTitle.visible = true;
+        $.requiredTitle.bottom = 20;
+        $.fileTitle.borderColor = Alloy.Globals.colors.red;
+    } else {
+        $.requiredTitle.height = 0;
+        $.requiredTitle.visible = false;
+        $.requiredTitle.bottom = 10;
+        $.fileTitle.borderColor = Alloy.Globals.colors.gray;
+    }
+}
+
+function validateDescription() {
+    if ($.fileDescription.getValue().length == 0) {
+        $.requiredDescription.height = 12;
+        $.requiredDescription.visible = true;
+        $.requiredDescription.bottom = 20;
+        $.fileDescription.borderColor = Alloy.Globals.colors.red;
+    } else {
+        $.requiredDescription.height = 0;
+        $.requiredDescription.visible = false;
+        $.requiredDescription.bottom = 10;
+        $.fileDescription.borderColor = Alloy.Globals.colors.gray;
+    }
+}
+
+function createFileName(fileTitle) {
+    return fileTitle.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.jpg';
+}

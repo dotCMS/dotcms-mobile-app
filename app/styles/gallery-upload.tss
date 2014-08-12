@@ -29,12 +29,19 @@
     right: 15
 }
 
-"#textArea": {
+".required": {
+    bottom: 10,
+    height: 0,
+    top: -10,
+    visible: false
+}
+
+"#fileDescription": {
     bottom: 10,
     height: 85
 }
 
-"#textField": {
+"#fileTitle": {
     bottom: 10,
     height: 44,
     paddingLeft: 5,

@@ -117,6 +117,12 @@
     width: 23
 }
 
+".required": {
+    color: Alloy.Globals.colors.red,
+    font: Alloy.Globals.fonts.secondary.mouse.regular,
+    left: 0
+}
+
 ".view-indicator": {
     backgroundColor: Alloy.Globals.colors.blue,
     borderRadius: 5,

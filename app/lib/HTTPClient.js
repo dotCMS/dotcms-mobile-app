@@ -27,16 +27,23 @@ HTTPClient.contentAPI = function(structure, orderBy, callback, identifier) {
     this.makeRequest(url, callback);
 };
 
-HTTPClient.uploadContent = function(content) {
+HTTPClient.uploadContent = function(content, callback) {
     var putContent = Ti.Network.createHTTPClient({
         onload: function(e) {
             //handle response, which at minimum will be an HTTP status code
             Ti.API.info('LOAD ------->');
             Ti.API.info(JSON.stringify(e));
+            callback();
+            Ti.App.fireEvent('hideLoading');
         },
         onerror: function(e) {
             Ti.API.info('ERROR ------->');
             Ti.API.info(JSON.stringify(e));
+            // TODO: Find a better way to handle errors
+            //{"type":"error","source":{"cache":false},"code":3,"error":"Authentication needed","success":false}
+            //{"type":"error","source":{"cache":false},"code":1,"error":"A connection failure occurred","success":false}
+            alert('Please try again later')
+            Ti.App.fireEvent('hideLoading');
         },
         onreadystatechange: function() {
             switch(this.readyState) {
@@ -69,8 +76,8 @@ HTTPClient.uploadContent = function(content) {
         },
         timeout: 5000
     });
-    putContent.open('PUT', Alloy.Globals.dotcms.url + '/api/content/publish/1/');
-    console.log(content);
+    Ti.App.fireEvent('showLoading');
+    putContent.open('POST', Alloy.Globals.dotcms.url + '/api/content/publish/1/');
     putContent.send(content);
 }
 
