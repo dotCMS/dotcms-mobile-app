@@ -82,9 +82,12 @@ function uploadContent() {
         'fileName': createFileName($.fileTitle.getValue()),
         'hostFolder': 'demo.dotcms.com',
         'stName': 'Document',
-        'sysPublishDate': new Date(),
         'title': $.fileTitle.getValue()
     };
+
+    if (!Alloy.Globals.isAndroid) {
+        content['sysPublishDate'] = new Date();
+    }
     HTTPClient.uploadContent(content, finishUpload);
 }
 
@@ -107,9 +110,9 @@ function validateFields() {
 
 function validateTitle() {
     if ($.fileTitle.getValue().length == 0) {
-        $.requiredTitle.height = 12;
+        $.requiredTitle.height = Alloy.Globals.isAndroid ? 20 : 12;
         $.requiredTitle.visible = true;
-        $.requiredTitle.bottom = 20;
+        $.requiredTitle.bottom = Alloy.Globals.isAndroid ? 12 : 12;
         $.fileTitle.borderColor = Alloy.Globals.colors.red;
     } else {
         $.requiredTitle.height = 0;
@@ -121,9 +124,9 @@ function validateTitle() {
 
 function validateDescription() {
     if ($.fileDescription.getValue().length == 0) {
-        $.requiredDescription.height = 12;
+        $.requiredDescription.height = Alloy.Globals.isAndroid ? 20 : 12;
         $.requiredDescription.visible = true;
-        $.requiredDescription.bottom = 20;
+        $.requiredDescription.bottom = Alloy.Globals.isAndroid ? 12 : 12;
         $.fileDescription.borderColor = Alloy.Globals.colors.red;
     } else {
         $.requiredDescription.height = 0;
@@ -134,5 +137,11 @@ function validateDescription() {
 }
 
 function createFileName(fileTitle) {
-    return fileTitle.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.jpg';
+    var prefix = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for(var i=0; i < 5; i++) {
+        prefix += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return fileTitle.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '-' + prefix + '.jpg';
 }

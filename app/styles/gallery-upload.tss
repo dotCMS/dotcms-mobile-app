@@ -10,6 +10,7 @@
     borderRadius: 5,
     borderWidth: 1,
     font: Alloy.Globals.fonts.secondary.body2.regular,
+    color: Alloy.Globals.colors.blue,
     left: 0,
     right: 0,
     width: Ti.UI.FILL,

@@ -55,10 +55,13 @@ HTTPClient.uploadContent = function(content, callback) {
                 case 1:
                     // open() has been called, now is the time to set headers
                     Ti.API.info('case 1, readyState = ' + this.readyState);
-                    var authCoded = Ti.Utils.base64encode('admin@dotcms.com:admin');
-                    putContent.setRequestHeader('DOTAUTH', authCoded);
-                    putContent.setRequestHeader('Content-Type', 'application/json');
-                    //putContent.setRequestHeader('enctype', 'multipart/form-data');
+
+                    if (Alloy.Globals.isiOS) {
+                        var authCoded = Ti.Utils.base64encode('admin@dotcms.com:admin');
+                        putContent.setRequestHeader('DOTAUTH', authCoded);
+                        //putContent.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+                        //putContent.setRequestHeader('Content-Type', 'multipart/form-data');
+                    }
                 break;
                 case 2:
                     // headers received, xhr.status should be available now
@@ -77,6 +80,10 @@ HTTPClient.uploadContent = function(content, callback) {
         timeout: 5000
     });
     Ti.App.fireEvent('showLoading');
+    if (Alloy.Globals.isAndroid) {
+        var authCoded = Ti.Utils.base64encode('admin@dotcms.com:admin');
+        putContent.setRequestHeader('DOTAUTH', authCoded);
+    }
     putContent.open('POST', Alloy.Globals.dotcms.url + '/api/content/publish/1/');
     putContent.send(content);
 }
