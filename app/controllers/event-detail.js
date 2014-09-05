@@ -1,7 +1,3 @@
-// TODO:
-// Actions:
-// -- Share
-
 $.args = arguments[0] || {};
 var content = $.args.content;
 var standardWinView = $.args.standardWinView;
@@ -9,6 +5,7 @@ var standardWinView = $.args.standardWinView;
 var eventDate = moment(content.startDate).format('MMM Do YYYY');
 var eventStartDate = moment(content.startDate).format('hh:mma');
 var eventEndDate = moment(content.endDate).format('hh:mma');
+var eventUrl = Alloy.Globals.dotcms.url + '/news-events/events/' + content.urlTitle;
 
 $.eventDate.text = eventDate;
 $.eventTime.text = 'From ' + eventStartDate + ' to ' + eventEndDate;
@@ -18,6 +15,15 @@ $.textShortened.load(Alloy.Globals.stripHtml(content.description));
 Alloy.Globals.openWindow(standardWinView);
 
 $.addToCalendar.addEventListener('click', addToCalendar);
+
+$.share.addEventListener('singletap', function() {
+    var content = {
+        text: $.eventTitle.text + '\n' + $.eventDate.text + '\n' + $.eventTime.text,
+        url: eventUrl
+    }
+    var shareWidget = Alloy.createWidget('share');
+    shareWidget.share(content);
+});
 
 function createEvent() {
     if (Alloy.Globals.isAndroid) {

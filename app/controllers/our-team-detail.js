@@ -1,8 +1,3 @@
-// TODO:
-// Actions:
-// -- Share
-// Avatar
-
 // Improve:
 // -- Add to contacts: a cooler way to let the user know the contact
 // has been added and check if the contact exist
@@ -33,7 +28,13 @@ $.addToContacts.addEventListener('singletap', function() {
 });
 
 $.share.addEventListener('singletap', function() {
-    console.log('Share contact');
+    var content = {
+        text: $.teamMemberName.text + '\n' + $.teamMemberjobTitle.text + '\n' + $.teamMemberPhoneLabel.text + '\n' + $.teamMemberEmailLabel.text,
+        url: '',
+        image: $.teamMemberAvatar.image
+    }
+    var shareWidget = Alloy.createWidget('share');
+    shareWidget.share(content);
 });
 
 function addNewContact() {

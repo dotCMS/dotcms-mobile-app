@@ -4,6 +4,7 @@
 
 ".btn-view": {
     backgroundColor: "transparent",
+    bubbleParent: false,
     width: Ti.UI.SIZE
 }
 
