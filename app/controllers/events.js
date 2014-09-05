@@ -45,9 +45,6 @@ var eventsParse = function(data) {
     });
     $.events.setSections(allSections);
     $.events.addEventListener('itemclick', eventDetail);
-
-    // Opening the window when all the content is ready
-    // TODO: height is not ok, check that!
     Alloy.Globals.openWindow(standardWinView);
 };
 

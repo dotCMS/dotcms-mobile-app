@@ -46,8 +46,6 @@ var ourTeamParse = function(data) {
 
         ourTeamData.push({
             teamMemberAvatar: {
-                // TODO: find a solution for images not set in dotcms
-                //image: item.photo
                 image: Alloy.Globals.dotcms.url + '/contentAsset/image/' + item.inode + '/photo/byInode/1/filter/Resize/resize_w/200',
             },
             teamMemberName: {
