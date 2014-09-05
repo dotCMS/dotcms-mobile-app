@@ -14,6 +14,7 @@ var standardWinView = $.args.standardWinView;
 // Opening the window when all the content is ready
 Alloy.Globals.openWindow(standardWinView);
 
+$.teamMemberAvatar.image = Alloy.Globals.dotcms.url + '/contentAsset/image/' + content.inode + '/photo/byInode/1/filter/Resize/resize_w/200';
 $.teamMemberName.text = content.firstName + ' ' + content.lastName;
 $.teamMemberjobTitle.text = content.jobTitle;
 $.teamMemberPhoneLabel.text = content.phone.indexOf('ext') != -1 ? content.phone.substr(0, content.phone.indexOf('ext')) : content.phone;

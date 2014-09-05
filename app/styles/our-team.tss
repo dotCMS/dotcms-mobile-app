@@ -15,8 +15,7 @@
 }
 
 ".team-member-avatar": {
-    //defaultImage: "/images/avatar-unknown.png",
-    //image: "/images/avatar-unknown.png",
+    defaultImage: "/images/avatar-unknown.png",
     height: 50,
     left: 15,
     width: 50
