@@ -72,7 +72,8 @@ function createNewContact() {
             work: [],
             mobile: [],
             fax: []
-        }
+        },
+        image: $.teamMemberAvatar.toImage()
     };
 
     if (content.email) {
