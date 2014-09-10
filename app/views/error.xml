@@ -1,0 +1,8 @@
+<Alloy>
+    <View id="content" class="content">
+        <View class="inner">
+            <Label id="message" class="message" />
+            <Button id="tryAgain" class="try-again" />
+        </View>
+    </View>
+</Alloy>

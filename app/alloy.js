@@ -71,18 +71,23 @@ Alloy.Globals.navcontroller = navController;
 
 // Opening new windows
 Alloy.Globals.winToOpen = function(option) {
-    var standardWin = Alloy.createController('standard-win');
-    var standardWinView = standardWin.getView();
-    standardWinView.title = option.title;
+    var topWin = Alloy.Globals.navcontroller.windowsInfo().stackTop || {};
+    var stackLength = Alloy.Globals.navcontroller.windowsInfo().stackLength;
+    if (topWin.name != option.id || stackLength == 0) {
+        var standardWin = Alloy.createController('standard-win');
+        var standardWinView = standardWin.getView();
+        standardWinView.title = option.title;
+        standardWinView.name = option.id;
 
-    // Setting the content into the just opened window
-    option.standardWinView = standardWinView;
-    var homeContent = Alloy.createController(option.id, option);
-    standardWin.setMainContent(homeContent.getView());
+        // Setting the content into the just opened window
+        option.standardWinView = standardWinView;
+        var mainContent = Alloy.createController(option.id, option);
+        standardWin.setMainContent(mainContent.getView());
 
-    // Setting the header right button
-    if (_.isObject(option.header)) {
-        standardWin.setHeaderButtons(option.header.buttons);
+        // Setting the header right button
+        if (_.isObject(option.header)) {
+            standardWin.setHeaderButtons(option.header.buttons);
+        }
     }
 };
 

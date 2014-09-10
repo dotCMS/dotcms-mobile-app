@@ -36,6 +36,12 @@ NavigationController.prototype.close = function(numWindows) {
     Ti.API.log('End Home. Stack: ' + this.windowStack.map(function(v) {return v.title;}));
 };
 
+NavigationController.prototype.closeOne = function() {
+    Ti.API.log('close one window');
+    (this.navGroup) ? this.navGroup.closeWindow(this.windowStack[this.windowStack.length - 1]) : this.windowStack[this.windowStack.length - 1].close();
+    this.windowStack.pop();
+};
+
 NavigationController.prototype.open = function(/*Ti.UI.Window*/windowToOpen) {
     Ti.API.log('Open function: ' + windowToOpen.id);
 
@@ -46,7 +52,6 @@ NavigationController.prototype.open = function(/*Ti.UI.Window*/windowToOpen) {
     var that = this;
     var lastPushed = windowToOpen;
     windowToOpen.addEventListener('close', function() {
-        console.log('CLOSING');
 
         if (that.windowStack.length > 1) { // don't pop the last Window, which is the base one
             Ti.API.log('Event "close": ' + this.title);

@@ -1,0 +1,17 @@
+".content": {
+    layout: "absolute"
+}
+
+".inner": {
+    height: Ti.UI.SIZE,
+    layout: "vertical",
+}
+
+".try-again": {
+    backgroundColor: Alloy.Globals.colors.gray,
+    borderRadius: 3,
+    color: Alloy.Globals.colors.white,
+    font: Alloy.Globals.fonts.secondary.header5.regular,
+    height: 44,
+    width: 120
+}

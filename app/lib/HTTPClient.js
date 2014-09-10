@@ -1,6 +1,7 @@
 var HTTPClient = {};
 
 HTTPClient.makeRequest = function(url, callback) {
+    var that = this;
     var client = Ti.Network.createHTTPClient({
         // function called when the response data is available
         onload: function(e) {
@@ -8,9 +9,19 @@ HTTPClient.makeRequest = function(url, callback) {
         },
         // function called when an error occurs, including a timeout
         onerror: function(e) {
-            Ti.API.debug(e.error);
+            Ti.API.error(e.error);
+            Alloy.Globals.winToOpen({
+                id: 'error',
+                title: 'Error',
+                callback: function() {
+                    that.makeRequest(url, function(res) {
+                        Alloy.Globals.navcontroller.closeOne();
+                        callback(res);
+                    });
+                }
+            });
         },
-        timeout: 15000  // in milliseconds
+        timeout: 3000  // in milliseconds
     });
     // Prepare the connection.
     console.log('!!! HTTP REQUEST TO: ' + url);
