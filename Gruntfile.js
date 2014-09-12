@@ -10,7 +10,17 @@ module.exports = function(grunt) {
         },
 
         titanium: {
-            'dist': {
+            'android': {
+                options: {
+                    platform: 'android',
+                    target: 'dist-playstore',
+                    outputDir: 'dist/android/',
+                    keystore: 'android/dotcms-keystore',
+                    storePassword  : 'dotcms321',
+                    alias: 'dotcms'
+                }
+            },
+            'ios': {
                 options: {
                     platform: 'ios',
                     target: 'dist-adhoc',
@@ -18,7 +28,7 @@ module.exports = function(grunt) {
                     deviceFamily: 'iphone',
                     ppUuid: '6d522ad4-1414-405d-bad5-00aa29cb6aba',
                     distributionName: 'Dotcms Services, LLC (9A4E22F7VB)',
-                    outputDir: 'dist'
+                    outputDir: 'dist/ios'
                 }
             },
             'clean': {
@@ -39,7 +49,7 @@ module.exports = function(grunt) {
             },
             iOS: {
                 options: {
-                    file: 'dist/Dotcms Starter.ipa'
+                    file: 'dist/ios/Dotcms Starter.ipa'
                 }
             }
         }
@@ -50,6 +60,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-titanium');
 
     // Default task(s).
-    grunt.registerTask('tf', ['titanium:dist', 'testflight', 'titanium:clean']);
+    grunt.registerTask('tf', ['titanium:ios', 'testflight', 'titanium:clean']);
+    grunt.registerTask('build', ['titanium:android', 'titanium:ios', 'titanium:clean']);
+    grunt.registerTask('android', ['titanium:android', 'titanium:clean']);
+    grunt.registerTask('ios', ['titanium:ios', 'titanium:clean']);
 
 };
