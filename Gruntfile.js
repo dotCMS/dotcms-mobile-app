@@ -7,10 +7,16 @@ module.exports = function(grunt) {
 
         jshint: {
             all: [
-            'Gruntfile.js',
-            'app/**/*.js',
-            '!app/lib/NavigationController.js'
+                'Gruntfile.js',
+                'app/**/*.js',
+                '!app/lib/NavigationController.js'
             ],
+        },
+
+        githooks: {
+            all: {
+                'pre-commit': 'jshint'
+            }
         },
 
         titanium: {
@@ -62,6 +68,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-testflight');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-titanium');
+    grunt.loadNpmTasks('grunt-githooks');
 
     // Default task(s).
     grunt.registerTask('tf', ['titanium:ios', 'testflight', 'titanium:clean']);
