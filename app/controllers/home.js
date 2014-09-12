@@ -10,32 +10,31 @@ function parseQuotes(quotesResult) {
 }
 
 function createQuote(name, open, changeinPercent, index) {
-    name == 'NASDAQ Composite' ? name = 'NASDAQ' : name = name;
+    name = name == 'NASDAQ Composite' ? 'NASDAQ' : name;
 
     var itemWrapper = Ti.UI.createView({
         id: 'item' + index
     });
-    var name = Ti.UI.createLabel({
+    var nameLabel = Ti.UI.createLabel({
         text: name
     });
-    var open = Ti.UI.createLabel({
+    var openLabel = Ti.UI.createLabel({
         text: open
     });
-    var change = Ti.UI.createLabel({
+    var changeLabel = Ti.UI.createLabel({
         text: changeinPercent
     });
 
-    var quoteClass;
-    changeinPercent[0] == '+' ? quoteClass = 'quote-change-up' : quoteClass = 'quote-change-down';
+    var quoteClass = changeinPercent[0] == '+' ? 'quote-change-up' : 'quote-change-down';
 
     $.resetClass(itemWrapper, 'quote-item');
-    $.resetClass(name, 'quote-name');
-    $.resetClass(open, 'quote-open');
-    $.resetClass(change, quoteClass);
+    $.resetClass(nameLabel, 'quote-name');
+    $.resetClass(openLabel, 'quote-open');
+    $.resetClass(changeLabel, quoteClass);
 
-    itemWrapper.add(name);
-    itemWrapper.add(open);
-    itemWrapper.add(change);
+    itemWrapper.add(nameLabel);
+    itemWrapper.add(openLabel);
+    itemWrapper.add(changeLabel);
 
     return itemWrapper;
 }
@@ -69,4 +68,4 @@ HTTPClient.contentAPI('News', 'sysPublishDate', newsParse);
 
 var data = encodeURIComponent('select * from yahoo.finance.quotes where symbol in ("^GSPC","^IXIC","AAPL")');
 var yahooFinanceUrl = Alloy.Globals.dotcms.yahooApi + 'q=' + data + '&format=json&diagnostics=true&env=http://datatables.org/alltables.env';
-HTTPClient.makeRequest(yahooFinanceUrl, parseQuotes)
+HTTPClient.makeRequest(yahooFinanceUrl, parseQuotes);

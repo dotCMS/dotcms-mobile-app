@@ -15,7 +15,7 @@ var dialog = Titanium.UI.createOptionDialog({
 //add event listener
 dialog.addEventListener('click', function(e) {
     //if first option was selected
-    if (e.index == 0) {
+    if (e.index === 0) {
         //then we are getting image from camera
         Titanium.Media.showCamera({
             //we got something
@@ -86,7 +86,7 @@ function uploadContent() {
     };
 
     if (!Alloy.Globals.isAndroid) {
-        content['sysPublishDate'] = new Date();
+        content.sysPublishDate = new Date();
     }
     HTTPClient.uploadContent(content, finishUpload);
 }
@@ -109,7 +109,7 @@ function validateFields() {
 }
 
 function validateTitle() {
-    if ($.fileTitle.getValue().length == 0) {
+    if ($.fileTitle.getValue().length === 0) {
         $.requiredTitle.height = Alloy.Globals.isAndroid ? 20 : 12;
         $.requiredTitle.visible = true;
         $.requiredTitle.bottom = Alloy.Globals.isAndroid ? 12 : 12;
@@ -123,7 +123,7 @@ function validateTitle() {
 }
 
 function validateDescription() {
-    if ($.fileDescription.getValue().length == 0) {
+    if ($.fileDescription.getValue().length === 0) {
         $.requiredDescription.height = Alloy.Globals.isAndroid ? 20 : 12;
         $.requiredDescription.visible = true;
         $.requiredDescription.bottom = Alloy.Globals.isAndroid ? 12 : 12;

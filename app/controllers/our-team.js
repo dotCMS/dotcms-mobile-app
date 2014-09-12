@@ -65,7 +65,7 @@ var ourTeamParse = function(data) {
     //$.ourTeam.sectionIndexTitles = indexLetters;
 
     $.ourTeam.setSections(allSections);
-    $.ourTeam.addEventListener('itemclick', ourTeamDetail);;
+    $.ourTeam.addEventListener('itemclick', ourTeamDetail);
 
     // Opening the window when all the content is ready
     Alloy.Globals.openWindow(standardWinView);

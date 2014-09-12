@@ -50,7 +50,7 @@ $.toggleMenu = function () {
         });
     }
 
-    var mainContainerPosition = mainContainer.left == 0 ? mainContainer.left + slideMenuwidth : 0;
+    var mainContainerPosition = mainContainer.left === 0 ? mainContainer.left + slideMenuwidth : 0;
     var mainContainerAnimation = Ti.UI.createAnimation({
         left: mainContainerPosition,
         duration: duration

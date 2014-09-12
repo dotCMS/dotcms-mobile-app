@@ -32,7 +32,7 @@ $.share.addEventListener('singletap', function() {
         text: $.teamMemberName.text + '\n' + $.teamMemberjobTitle.text + '\n' + $.teamMemberPhoneLabel.text + '\n' + $.teamMemberEmailLabel.text,
         url: '',
         image: $.teamMemberAvatar.image
-    }
+    };
     var shareWidget = Alloy.createWidget('share');
     shareWidget.share(content);
 });

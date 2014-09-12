@@ -53,7 +53,7 @@ HTTPClient.uploadContent = function(content, callback) {
             // TODO: Find a better way to handle errors
             //{"type":"error","source":{"cache":false},"code":3,"error":"Authentication needed","success":false}
             //{"type":"error","source":{"cache":false},"code":1,"error":"A connection failure occurred","success":false}
-            alert('Please try again later')
+            alert('Please try again later');
             Ti.App.fireEvent('hideLoading');
         },
         onreadystatechange: function() {
@@ -97,6 +97,6 @@ HTTPClient.uploadContent = function(content, callback) {
     }
     putContent.open('POST', Alloy.Globals.dotcms.url + '/api/content/publish/1/');
     putContent.send(content);
-}
+};
 
 module.exports = HTTPClient;

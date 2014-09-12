@@ -17,7 +17,7 @@ $.share = function(content) {
         });
 
         intent.putExtra(Ti.Android.EXTRA_TEXT, content.text + '\n' + content.url);
-        intent.putExtraUri(Ti.Android.EXTRA_STREAM, content.image)
+        intent.putExtraUri(Ti.Android.EXTRA_STREAM, content.image);
         activity.startActivity(Ti.Android.createIntentChooser(intent, 'Share'));
     }
-}
+};

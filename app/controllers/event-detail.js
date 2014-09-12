@@ -20,22 +20,21 @@ $.share.addEventListener('singletap', function() {
     var content = {
         text: $.eventTitle.text + '\n' + $.eventDate.text + '\n' + $.eventTime.text,
         url: eventUrl
-    }
+    };
     var shareWidget = Alloy.createWidget('share');
     shareWidget.share(content);
 });
 
 function createEvent() {
+    var defCalendar;
     if (Alloy.Globals.isAndroid) {
         var CALENDAR_TO_USE = 3;
-        var defCalendar = Ti.Android.Calendar.getCalendarById(CALENDAR_TO_USE);
+        defCalendar = Ti.Android.Calendar.getCalendarById(CALENDAR_TO_USE);
     } else {
-        var defCalendar = Ti.Calendar.defaultCalendar;
+        defCalendar = Ti.Calendar.defaultCalendar;
     }
     var startDate = new Date(moment(content.startDate).format('2014/MM/D'));
     var endDate = new Date(moment(content.endDate).format('2014/MM/D'));
-    console.log(content.title);
-    console.log(Alloy.Globals.stripHtml(content.description));
     var event1 = defCalendar.createEvent({
                     title: content.title,
                     notes: Alloy.Globals.stripHtml(content.description),

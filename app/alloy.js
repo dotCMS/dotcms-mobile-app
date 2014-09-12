@@ -73,7 +73,7 @@ Alloy.Globals.navcontroller = navController;
 Alloy.Globals.winToOpen = function(option) {
     var topWin = Alloy.Globals.navcontroller.windowsInfo().stackTop || {};
     var stackLength = Alloy.Globals.navcontroller.windowsInfo().stackLength;
-    if (topWin.name != option.id || stackLength == 0) {
+    if (topWin.name != option.id || stackLength === 0) {
         var standardWin = Alloy.createController('standard-win');
         var standardWinView = standardWin.getView();
         standardWinView.title = option.title;
@@ -94,7 +94,7 @@ Alloy.Globals.winToOpen = function(option) {
 Alloy.Globals.openWindow = function(win) {
     Alloy.Globals.navcontroller.open(win);
     Ti.App.fireEvent('hideLoading');
-}
+};
 
 
 // Utils

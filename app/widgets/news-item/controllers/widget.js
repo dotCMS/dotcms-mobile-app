@@ -7,7 +7,7 @@ var id = content.id;
 var image = Alloy.Globals.dotcms.url + '/contentAsset/image/' + content.inode + '/image/byInode/1/filter/Resize/resize_w/' + Alloy.Globals.platformWidth;
 var lead = content.lead || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 var title = content.title;
-var newUrl = Alloy.Globals.dotcms.url + '/news/' + content.urlTitle
+var newUrl = Alloy.Globals.dotcms.url + '/news/' + content.urlTitle;
 
 $.newComments.text = commentscount;
 $.newDate.text = date;
@@ -22,7 +22,7 @@ $.shareButton.addEventListener('singletap', function() {
         text: $.newTitle.text,
         image: $.newImage.image,
         url: newUrl
-    }
+    };
     var shareWidget = Alloy.createWidget('share');
     shareWidget.share(content);
 });
