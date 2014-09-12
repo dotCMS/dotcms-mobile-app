@@ -5,5 +5,7 @@ npm-debug.log
 tmp
 .map
 Resources/
+node_modules
+dist
 dotcmsstarter.sublime-project
 dotcmsstarter.sublime-workspace

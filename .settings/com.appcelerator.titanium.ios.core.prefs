@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=Dotcms Starter
+iosLaunchConfigurationAttributes/appid=com.dotcms.starter
+iosLaunchConfigurationAttributes/certificate=Dotcms Services, LLC (9A4E22F7VB)
+iosLaunchConfigurationAttributes/distribute_path=/Volumes/Secondary/Users/fmontes/Dropbox/starter-app
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/output_format=ipa
+iosLaunchConfigurationAttributes/sdk_version=7.1
+iosLaunchConfigurationAttributes/uuid=6d522ad4-1414-405d-bad5-00aa29cb6aba

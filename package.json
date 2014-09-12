@@ -1,0 +1,19 @@
+{
+  "name": "dotcms-starter-app",
+  "version": "0.0.1",
+  "description": "DotCMS starter mobile app",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-testflight": "^0.1.3",
+    "grunt-titanium": "^0.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DotCMS",
+  "license": "ISC"
+}
