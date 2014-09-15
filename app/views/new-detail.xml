@@ -3,9 +3,9 @@
         <Label id="newTitle" class="new-title" />
         <View id="newInfo" class="new-info">
             <Label id="newDate" class="new-info-label" />
-            <View class="disc-separator" />
+            <!-- <View class="disc-separator" />
             <ImageView class="new-comments-icn" image="/images/icn-comments-gray.png"/>
-            <Label id="newCommnets" class="new-info-label" />
+            <Label id="newCommnets" class="new-info-label" /> -->
             <View class="disc-separator" />
             <Label id="newByLine" class="new-info-label" />
         </View>

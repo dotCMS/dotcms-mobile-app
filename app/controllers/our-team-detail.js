@@ -27,15 +27,17 @@ $.addToContacts.addEventListener('singletap', function() {
     addNewContact();
 });
 
-$.share.addEventListener('singletap', function() {
-    var content = {
-        text: $.teamMemberName.text + '\n' + $.teamMemberjobTitle.text + '\n' + $.teamMemberPhoneLabel.text + '\n' + $.teamMemberEmailLabel.text,
-        url: '',
-        image: $.teamMemberAvatar.image
-    };
-    var shareWidget = Alloy.createWidget('share');
-    shareWidget.share(content);
-});
+if (Alloy.Globals.isiOS) {
+    $.share.addEventListener('singletap', function() {
+        var content = {
+            text: $.teamMemberName.text + '\n' + $.teamMemberjobTitle.text + '\n' + $.teamMemberPhoneLabel.text + '\n' + $.teamMemberEmailLabel.text,
+            url: '',
+            image: $.teamMemberAvatar.image
+        };
+        var shareWidget = Alloy.createWidget('share');
+        shareWidget.share(content);
+    });
+}
 
 function addNewContact() {
     if (Alloy.Globals.isAndroid) {

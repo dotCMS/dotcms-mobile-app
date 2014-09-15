@@ -5,6 +5,7 @@
 ".btn-view": {
     backgroundColor: "transparent",
     bubbleParent: false,
+    left: 10,
     width: Ti.UI.SIZE
 }
 
@@ -59,6 +60,10 @@
     layout: "horizontal",
     left: 5,
     right: 5,
+}
+
+".new-actions[platform=android]": {
+    layout: "absolute"
 }
 
 ".new-date": {

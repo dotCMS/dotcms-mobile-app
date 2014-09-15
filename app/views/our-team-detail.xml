@@ -22,7 +22,7 @@
             </View>
             <Label id="addToContactsLabel" class="action-label" text="Add to contacts" />
         </View>
-        <View id="share" class="action-view">
+        <View id="share" class="action-view" platform="ios">
             <View id="shareIcon" class="action-icon">
                 <ImageView id="shareIconImg" class="icon-share" />
             </View>

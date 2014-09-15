@@ -16,14 +16,16 @@ Alloy.Globals.openWindow(standardWinView);
 
 $.addToCalendar.addEventListener('click', addToCalendar);
 
-$.share.addEventListener('singletap', function() {
-    var content = {
-        text: $.eventTitle.text + '\n' + $.eventDate.text + '\n' + $.eventTime.text,
-        url: eventUrl
-    };
-    var shareWidget = Alloy.createWidget('share');
-    shareWidget.share(content);
-});
+if (Alloy.Globals.isiOS) {
+    $.share.addEventListener('singletap', function() {
+        var content = {
+            text: $.eventTitle.text + '\n' + $.eventDate.text + '\n' + $.eventTime.text,
+            url: eventUrl
+        };
+        var shareWidget = Alloy.createWidget('share');
+        shareWidget.share(content);
+    });
+}
 
 function createEvent() {
     var defCalendar;
