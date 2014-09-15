@@ -9,3 +9,4 @@ node_modules
 dist
 dotcmsstarter.sublime-project
 dotcmsstarter.sublime-workspace
+.idea/
