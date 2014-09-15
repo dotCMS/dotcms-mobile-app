@@ -7,7 +7,6 @@ Ti.App.addEventListener('openSection', function(option) {
 
     if (option.first) {
         Alloy.Globals.navcontroller.home();
-        Ti.App.fireEvent('hideLoading');
     } else {
         Alloy.Globals.winToOpen(option);
     }

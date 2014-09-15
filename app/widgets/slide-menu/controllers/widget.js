@@ -21,7 +21,6 @@ function createRow(option) {
     row.add(label);
     row.addEventListener('click', function() {
         Ti.App.fireEvent('openSection', option);
-        Ti.App.fireEvent('showLoading');
     });
     menuRows.push(row);
 }

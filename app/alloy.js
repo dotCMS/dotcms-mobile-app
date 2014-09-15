@@ -93,7 +93,6 @@ Alloy.Globals.winToOpen = function(option) {
 
 Alloy.Globals.openWindow = function(win) {
     Alloy.Globals.navcontroller.open(win);
-    Ti.App.fireEvent('hideLoading');
 };
 
 

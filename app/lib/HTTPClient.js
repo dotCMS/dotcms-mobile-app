@@ -1,10 +1,12 @@
 var HTTPClient = {};
 
 HTTPClient.makeRequest = function(url, callback) {
+    Ti.App.fireEvent('showLoading');
     var that = this;
     var client = Ti.Network.createHTTPClient({
         // function called when the response data is available
         onload: function(e) {
+            Ti.App.fireEvent('hideLoading');
             callback(JSON.parse(this.responseText));
         },
         // function called when an error occurs, including a timeout
