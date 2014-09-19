@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
     var buildNotes = grunt.option('buildNotes');
+    var notifify = grunt.option('notify') || false;
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
                     target: 'dist-adhoc',
                     iosVersion: '7.1',
                     deviceFamily: 'iphone',
-                    ppUuid: '6d522ad4-1414-405d-bad5-00aa29cb6aba',
+                    ppUuid: '0c562c91-c07d-4aba-a431-9ece6c0d0c77',
                     distributionName: 'Dotcms Services, LLC (9A4E22F7VB)',
                     outputDir: 'dist/ios'
                 }
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
                 apiToken: 'a67ac5e5b81e1cc76da55fb630256dca_MjA4MDc4MzIwMTQtMDktMDMgMTA6MDY6MzYuMDc1MDU4',
                 distributionLists: ['DotCMS iOS'],
                 notes: buildNotes,
-                notify: false,
+                notify: notifify,
                 teamToken: '7f1b790e4331792b9f92203126a36175_NDI4NDI4MjAxNC0wOS0wMyAxMDoxNDo0NS4wMTQ3NDk',
             },
             iOS: {
