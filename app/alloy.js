@@ -14,7 +14,7 @@ var moment = require('alloy/moment');
 
 //Dotcms env
 Alloy.Globals.dotcms = {
-    url: 'http://starter.dotcms.com:8080',
+    url: 'http://demo30.dotcms.com',
     hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
     yahooApi: 'http://query.yahooapis.com/v1/public/yql?'
 };
