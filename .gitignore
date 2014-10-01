@@ -7,6 +7,6 @@ tmp
 Resources/
 node_modules
 dist
-dotcmsstarter.sublime-project
-dotcmsstarter.sublime-workspace
+dotcmsdemo.sublime-project
+dotcmsdemo.sublime-workspace
 .idea/

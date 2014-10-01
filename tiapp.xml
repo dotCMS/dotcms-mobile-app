@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.dotcms.starter</id>
-    <name>Dotcms Starter</name>
+    <name>dotCMS Demo</name>
     <version>1.0</version>
     <publisher>Dotcms</publisher>
     <url>http://dotcms.com</url>
