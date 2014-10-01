@@ -1,12 +1,13 @@
 {
-  "name": "dotcms-starter-app",
+  "name": "dotcms-demo-app",
   "version": "0.0.1",
-  "description": "DotCMS starter mobile app",
+  "description": "DotCMS demo mobile app",
   "main": "index.js",
   "dependencies": {
     "grunt": "^0.4.5"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-githooks": "^0.3.1",
     "grunt-testflight": "^0.1.3",
