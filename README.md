@@ -8,8 +8,9 @@ Username: admin@dotcms.com
 Password: admin
 ```
 ### Load and save content with dotCMS content api:
-- http://dotcms.com/docs/latest/ContentAPI
-- http://dotcms.com/docs/latest/RESTSaveContent
+* http://dotcms.com/docs/latest/ContentAPI
+* http://dotcms.com/docs/latest/RESTSaveContent
+
 -------------
 
 ## How to run locally?
@@ -36,30 +37,30 @@ titanium build --platform <platform> [--build-only] [--force] [--project-dir <va
 More info at: [Titanium Comand Line Interface Documentation](http://docs.appcelerator.com/titanium/3.0/#!/guide/Titanium_Command-Line_Interface_Reference-section-35619828_TitaniumCommand-LineInterfaceReference-Build)
 
 ### Grunt tasks
-1. Build and upload to Testflight:
+Build and upload to Testflight:
 ```
 grunt tf
 ```
 
-2. Build the iOS .ipa
+Build the iOS .ipa
 ```
 grunt ios
 ```
 
-3. Build the Android .apk
+Build the Android .apk
 ```
 grunt android
 ```
 
-3. Build the iOS .ipa and Android .apk
+Build the iOS .ipa and Android .apk
 ```
 grunt build
 ```
 
 All the build files are saved in /dist/ folder.
 
-
 -------
+
 ### TODO:
 1. Create a grunt task for run project Android and iOS simulators
 2. iPad version maybe?
