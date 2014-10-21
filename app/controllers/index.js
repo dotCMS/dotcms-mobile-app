@@ -1,18 +1,27 @@
-// Opening the first window and controller
-Alloy.Globals.winToOpen(Alloy.Globals.menuOptions[0]);
+// Create the controller
+var standardWin = Alloy.createController('standard-win');
 
-// From the slide-menu widget trigger this event to open every menu section
-Ti.App.addEventListener('openSection', function(option) {
-    Ti.App.fireEvent('toggleSlide'); // this one is to close the slide menu
+// Get the object window in this controller
+var standardWinView = standardWin.getView();
 
-    if (option.first) {
-        Alloy.Globals.navcontroller.home();
-    } else {
-        Alloy.Globals.winToOpen(option);
-    }
-});
+// Create an object that contains:
+// id: name of the controller to add to the window
+// title: title of the controller
+// standardWinView: object window of controller standard-win
+var options = {
+    id: 'our-team',
+    title: 'Our Team',
+    standardWinView: standardWinView
+};
 
-Ti.App.addEventListener('goToHome', function() {
-    Alloy.Globals.navcontroller.home();
-});
+// Set title to the window object
+standardWinView.title = options.title;
+// Set name to the window object
+standardWinView.name = options.id;
 
+// Create the new controller we want to add to the standard-win
+// We pass the controller name (our-team) and the options
+var mainContent = Alloy.createController(options.id, options);
+
+// Set the controller (our-team) inside the controller standard-wins
+standardWin.setMainContent(mainContent.getView());

@@ -1,10 +1,5 @@
 <Alloy>
     <Window id="standardWindow" class="standard-window">
-        <Widget src="slide-menu" id="slideMenu" width="200" />
-        <View id="loaderView" class="loader-view">
-            <View class="loader-view-bg" platform="android" />
-            <ActivityIndicator id="loaderIndicator" class="loader-indicator" />
-        </View>
         <View id="standardView" class="standard-view">
             <Widget src="header" id="header" />
         </View>

@@ -1,5 +1,0 @@
-<Alloy>
-    <View id="slideMenu" class="slide-menu">
-        <TableView id="menuOptions" class="menu-options" />
-    </View>
-</Alloy>

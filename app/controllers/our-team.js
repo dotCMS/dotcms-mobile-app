@@ -1,10 +1,17 @@
+// Receive the arguments we send when the controller is created
 $.args = arguments[0] || {};
 var standardWinView = $.args.standardWinView;
 
+// Adding listview search bar for android
 if (!Alloy.Globals.isAndroid) {
     $.ourTeam.searchView = $.ourTeamSearchBar;
 }
 
+/**
+Create the header for each secion of the list
+@param a string with the letter.
+@return a view object with the header section styled.
+*/
 var createHeaderView = function(content) {
     var sectionHeader = Alloy.createWidget('listview-header');
     sectionHeader.load(content);
@@ -12,6 +19,13 @@ var createHeaderView = function(content) {
 };
 
 var allSections = [];
+
+/**
+Parse the data received from the request. Get all the contentlet
+and create a listview row for each. Also create a listview section
+for each letter of the names of the team members.
+@param a json object with all the data from dotCMS
+*/
 var ourTeamParse = function(data) {
     var indexLetters = [];
     var contentlets = data.contentlets;
@@ -61,24 +75,21 @@ var ourTeamParse = function(data) {
         });
     });
 
-    // Set the index letter on the right, disabled for now
-    //$.ourTeam.sectionIndexTitles = indexLetters;
-
+    // Add all the sections to the listview
     $.ourTeam.setSections(allSections);
-    $.ourTeam.addEventListener('itemclick', ourTeamDetail);
 
     // Opening the window when all the content is ready
-    Alloy.Globals.openWindow(standardWinView);
+    standardWinView.open();
 };
 
-var ourTeamDetail = function(e) {
-    var detail = allSections[e.sectionIndex].getItemAt(e.itemIndex).detail;
-    Alloy.Globals.winToOpen({
-        id: 'our-team-detail',
-        title: detail.firstName + ' ' + detail.lastName,
-        content: detail
-    });
-};
-
+// Load the HTTPClient component
 var HTTPClient = require('HTTPClient');
+
+/**
+Make the request to dotCMS enviroment
+@param dotCMS struture name
+@param order by field
+@param function to callback when the request it's done.
+*/
+
 HTTPClient.contentAPI('Employee', 'firstName', ourTeamParse);

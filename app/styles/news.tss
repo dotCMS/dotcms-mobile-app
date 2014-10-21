@@ -1,9 +1,0 @@
-".news": {
-    separatorColor: "transparent"
-}
-
-".new-row": {
-    color: Alloy.Globals.colors.blue,
-    font: Alloy.Globals.fonts.secondary.body1.regular,
-    hasChild: true
-}

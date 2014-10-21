@@ -1,5 +1,0 @@
-<Alloy>
-    <TableView id="products" class="products">
-        <SearchBar id="productSearchBar" class="product-search-bar" />
-    </TableView>
-</Alloy>

@@ -1,5 +1,0 @@
-<Alloy>
-    <ScrollView id="content" class="content">
-        <Require type="widget" src="com.prodz.tiflexigrid" id="fg"/>
-    </ScrollView>
-</Alloy>

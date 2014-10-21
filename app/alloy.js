@@ -10,91 +10,12 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-var moment = require('alloy/moment');
-
 //Dotcms env
 Alloy.Globals.dotcms = {
     url: 'http://demo30.dotcms.com',
     hostId: '48190c8c-42c4-46af-8d1a-0cd5db894797',
     yahooApi: 'http://query.yahooapis.com/v1/public/yql?'
 };
-
-// Menu options
-// The id is the name of the controller
-Alloy.Globals.menuOptions = [
-    {
-        first: true,
-        id: 'home',
-        title: 'Home'
-    },
-    {
-        id: 'about-us',
-        title: 'About Us'
-    },
-    {
-        id: 'our-team',
-        title: 'Our Team'
-    },
-    {
-        id: 'products',
-        title: 'Products'
-    },
-    {
-        id: 'news',
-        title: 'News'
-    },
-    {
-        id: 'events',
-        title: 'Events'
-    },
-    {
-        id: 'gallery',
-        title: 'Gallery',
-        header: {
-            buttons: {
-                icon: 'plus',
-                id: 'gallery-upload',
-                title: 'Upload content to gallery'
-            }
-        }
-    },
-    // {
-    //     id: 'contact-us',
-    //     title: 'Contact Us'
-    // }
-];
-
-// Creating NavigationController as a global object
-var NavigationController = require('NavigationController'); // use the NavigationController library
-var navController = new NavigationController();
-Alloy.Globals.navcontroller = navController;
-
-// Opening new windows
-Alloy.Globals.winToOpen = function(option) {
-    var topWin = Alloy.Globals.navcontroller.windowsInfo().stackTop || {};
-    var stackLength = Alloy.Globals.navcontroller.windowsInfo().stackLength;
-    if (topWin.name != option.id || stackLength === 0) {
-        var standardWin = Alloy.createController('standard-win');
-        var standardWinView = standardWin.getView();
-        standardWinView.title = option.title;
-        standardWinView.name = option.id;
-
-        // Setting the content into the just opened window
-        option.standardWinView = standardWinView;
-        var mainContent = Alloy.createController(option.id, option);
-        standardWin.setMainContent(mainContent.getView());
-
-        // Setting the header right button
-        if (_.isObject(option.header)) {
-            standardWin.setHeaderButtons(option.header.buttons);
-        }
-    }
-};
-
-Alloy.Globals.openWindow = function(win) {
-    Alloy.Globals.navcontroller.open(win);
-};
-
 
 // Utils
 Alloy.Globals.isAndroid = Ti.Platform.osname == 'android';
