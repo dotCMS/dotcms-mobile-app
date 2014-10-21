@@ -60,7 +60,7 @@ module.exports = function(grunt) {
             },
             iOS: {
                 options: {
-                    file: 'dist/ios/dotCMS Demo.ipa'
+                    file: 'dist/ios/dotCMS Stater.ipa'
                 }
             }
         }

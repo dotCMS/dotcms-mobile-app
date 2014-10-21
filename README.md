@@ -1,4 +1,4 @@
-#dotCMS Demo App
+#dotCMS Stater App
 Build with [Appcelerator Titanium](http://google.com) a development environment thats allows build, test, package and publish mobile apps for iOS, Android, Blackerry and other SO's using only JavaScript and a single code base.
 
 ## DotCMS Backend

@@ -1,7 +1,7 @@
 {
   "name": "dotcms-demo-app",
   "version": "0.0.1",
-  "description": "DotCMS demo mobile app",
+  "description": "dotCMS starter mobile app",
   "main": "index.js",
   "dependencies": {
     "grunt": "^0.4.5"
